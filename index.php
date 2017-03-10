@@ -23,7 +23,7 @@
 
       <div class="site-wrapper-inner">
 
-        <div class="cover-container">
+        <div class="cover-container ">
 
           <div class="masthead clearfix">
             <div class="inner">
@@ -46,12 +46,12 @@
                   <div id="home">
                     <div id="homecont">Here</div>
                   </div>
-                  <div id="code">
+                  <div id="code" class="clo">
                     <div id="codecont">
-                    HERE
+                        
                     </div>
                   </div>
-                  <div id="contact">
+                  <div id="contact" class="clo">
                     <div id="contactcont">
                     HEREs
                     </div>
