@@ -4,7 +4,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title></title>
+    <title>Kishon A. Diaz</title>
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     
     <link href="css/cover.css" rel="stylesheet">
@@ -28,19 +29,25 @@
 
           <div class="masthead clearfix">
             <div class="inner">
-              <h3 class="masthead-brand">Cover</h3>
+              <h3 class="masthead-brand">Kishon A. Diaz</h3>
               <nav>
                 <ul class="nav masthead-nav">
                   <li class="navtop active" data-id="home">
-                    <a href="#home" data-id="home">Home</a
+                      <a href="#home" data-id="home">Home</a
                   </li>
                   <li class="navtop" data-id="code" >
-                    <a href="#codes" data-id="codes">Codes</a>
-                 </li>
-                <li class="navtop" data-id="contact" >
-                  <a href="#contact" data-id="contacts">Contact</a>
-               </li>
-             </ul>
+                      <a href="#gallery" data-id="gallery">Gallery</a>
+                  </li>
+                  <li class="navtop" data-id="code" >
+                      <a href="#codes" data-id="codes">Codes</a>
+                  </li>
+                  <li class="navtop" data-id="code" >
+                      <a href="#about" data-id="about">About Me</a>
+                  </li>
+                  <li class="navtop" data-id="contact" >
+                    <a href="#contact" data-id="contacts">Contact</a>
+                  </li>
+              </ul>
             </nav>
             </div>
           </div>
@@ -52,8 +59,8 @@
                 <div class="pages">
                   <div id="home" >
                     <div id="homecont" class="cont">
-                     <div class="pagecont"> 
-                       Here
+                     <div class="pagecont">
+                       <span>I love to program,learn and expand my knowledge in the field of technologies, and I will work hard to impress you. I  hope I help develop new technologies with your company </span>
                      </div>
                     </div>
                   </div>
