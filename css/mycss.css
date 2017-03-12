@@ -1,32 +1,82 @@
-
-.pages{
+body{
   overflow: hidden;
+}
+.pages{
+ 
+/*
   background: green !important;
   background: green ;
-  display: inline-flex;
+*/
+/*  display: inline-flex;*/
   width: 100%;
   height: 100%;
   max-height: 43vh;
-  padding: 42vh;
+  padding:50vmin 42vmin 50vmin 42vmin;
 }
 .pages div{
 }
+br{
+  padding: 0;
+}
 .open{
   overflow: hidden;
-  background: green !important;
-  background: green ;
-  display: inline-flex;
+ /* background: green !important;
+  background: green ;*/
+/*  display: inline-flex;*/
   width: 100%;
   height: 100%;
   max-height: 43vh;
-  padding: 82vh;
+  /*padding: 82vh;*/
+}
+.pagecont{
+  overflow: auto;
+  position: absolute;
+  background: green;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  text-align: justify;
+  text-emphasis-position: right;
+  /*
+  padding-right: 32vmin;
+  padding-left: 32vmin;
+  padding-top: 32vmin;
+  padding-bottom: 32vmin;
+  margin-left:-32vmin;
+  margin-right:-32vmin;
+  margin-top:-30vmin;
+  margin-bottom:-31.7vmin;
+  border-radius: 25px;
+*/
+}
+.cont{
+  overflow: hidden;
+  overflow-y: hidden;
+  position:relative;
+  display:block;
+  background: linear-gradient(rgba(224,255,255,.4),rgba(224,255,255,.4));
+  padding-right: 32vmin;
+  padding-left: 32vmin;
+  padding-top: 32vmin;
+  padding-bottom: 32vmin;
+  margin-left:-53vmin;
+  margin-right:-53vmin;
+  margin-top:-30vmin;
+  margin-bottom:-20vmin;
+  border-radius: 25px;
+  left 0;
+  right 0;
 }
 .clo{
   /*position: relative;*/
+  
+  
   width: 0;
   height: 0;
   padding: 0;
-  float: left;
   visibility: hidden !important;
   
 }

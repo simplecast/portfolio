@@ -15,6 +15,7 @@
       :root #content > #center > .dose > .dosesingle
       { display: none !important; }
     </style>
+    <script type="text/javascript" src="javascprit/arraylist.js"></script>
      <script type="text/javascript" src="javascprit/jquery-3.1.1.min.js"></script>
     <link rel="stylesheet" href="css/mycss.css">
   </head>
@@ -30,11 +31,17 @@
               <h3 class="masthead-brand">Cover</h3>
               <nav>
                 <ul class="nav masthead-nav">
-                  <li class="active"><a class="a" href="#home" data-id="home">Home</a></li>
-                  <li><a href="#codes" data-id="codes">Codes</a></li>
-                  <li><a href="#contact" data-id="contacts">Contact</a></li>
-                </ul>
-              </nav>
+                  <li class="navtop active" data-id="home">
+                    <a href="#home" data-id="home">Home</a
+                  </li>
+                  <li class="navtop" data-id="code" >
+                    <a href="#codes" data-id="codes">Codes</a>
+                 </li>
+                <li class="navtop" data-id="contact" >
+                  <a href="#contact" data-id="contacts">Contact</a>
+               </li>
+             </ul>
+            </nav>
             </div>
           </div>
           <div class="inner cover">
@@ -43,17 +50,26 @@
               </div>
               <div class="opened">
                 <div class="pages">
-                  <div id="home">
-                    <div id="homecont">Here</div>
-                  </div>
-                  <div id="code" class="clo">
-                    <div id="codecont">
-                        h
+                  <div id="home" >
+                    <div id="homecont" class="cont">
+                     <div class="pagecont"> 
+                       Here
+                     </div>
                     </div>
                   </div>
-                  <div id="contact" class="clo">
-                    <div id="contactcont">
-                    HEREs
+                 
+                  <div id="code" class="">
+                    <div id="codecont" class="cont clo">
+                      <div class="pagecont"> 
+                       Here
+                     </div>
+                    </div>
+                  </div>
+                  <div id="contact" class="">
+                    <div id="contactcont" class="cont clo">
+                      <div class="pagecont"> 
+                       Here
+                      </div>
                     </div>
                   </div>
                 </div>
