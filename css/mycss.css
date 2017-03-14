@@ -84,12 +84,12 @@ span{
   
 }
 .masthead-brand{
-  font-size: 2vmin;
+  font-size: 1em;
   font-weight: bold;
 }
 .rimg{
-  width: 10.5vmin !important;
-  height: 10.3vmin !important;
+  width: 100px !important;
+  height: 100px !important;
 }
 .clo{
   /*position: relative;*/

@@ -72,28 +72,29 @@
                   <div id="code" class="">
                     <div id="codecont" class="cont clo">
                       <div class="pagecont"> 
-                       Here
+                       <table class="iconss"> 
+                       </table>
                      </div>
                     </div>
                   </div>
                   <div id="gallery" class="">
                     <div id="gallerycont" class="cont clo">
                       <div class="pagecont"> 
-                       Here
+                       Under Construction
                      </div>
                     </div>
                   </div>
                   <div id="about" class="">
                     <div id="aboutcont" class="cont clo">
                       <div class="pagecont"> 
-                       Here
+                       Under Construction
                      </div>
                     </div>
                   </div>
                   <div id="contact" class="">
                     <div id="contactcont" class="cont clo">
                       <div class="pagecont"> 
-                       Here
+                       Under Construction
                       </div>
                     </div>
                   </div>
