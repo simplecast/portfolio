@@ -29,19 +29,20 @@
 
           <div class="masthead clearfix">
             <div class="inner">
+              <img class=" masthead-brand img-circle rimg" src="assets/kishon_image.png" alt="Picture of Kishon Diaz" width="369" height="415">
               <h3 class="masthead-brand">Kishon A. Diaz</h3>
               <nav>
                 <ul class="nav masthead-nav">
                   <li class="navtop active" data-id="home">
                       <a href="#home" data-id="home">Home</a
                   </li>
-                  <li class="navtop" data-id="code" >
+                  <li class="navtop" data-id="gallery" >
                       <a href="#gallery" data-id="gallery">Gallery</a>
                   </li>
                   <li class="navtop" data-id="code" >
                       <a href="#codes" data-id="codes">Codes</a>
                   </li>
-                  <li class="navtop" data-id="code" >
+                  <li class="navtop" data-id="about" >
                       <a href="#about" data-id="about">About Me</a>
                   </li>
                   <li class="navtop" data-id="contact" >
@@ -60,13 +61,30 @@
                   <div id="home" >
                     <div id="homecont" class="cont">
                      <div class="pagecont">
-                       <span>I love to program,learn and expand my knowledge in the field of technologies, and I will work hard to impress you. I  hope I help develop new technologies with your company </span>
+                       <span>I love to program,learn and expand my knowledge in the field of technologies, and I will work hard to impress you. I  hope I help develop new technologies with your company<br>
+                       <a>Learn more about me?</a>
+                       </span>
+                       
                      </div>
                     </div>
                   </div>
                  
                   <div id="code" class="">
                     <div id="codecont" class="cont clo">
+                      <div class="pagecont"> 
+                       Here
+                     </div>
+                    </div>
+                  </div>
+                  <div id="gallery" class="">
+                    <div id="gallerycont" class="cont clo">
+                      <div class="pagecont"> 
+                       Here
+                     </div>
+                    </div>
+                  </div>
+                  <div id="about" class="">
+                    <div id="aboutcont" class="cont clo">
                       <div class="pagecont"> 
                        Here
                      </div>

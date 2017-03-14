@@ -5,15 +5,23 @@ $("a").click(function(){
   clicked = $(this).data('id');
   switch(clicked){
     case "home":{
-      displaynow("#homecont",["#codecont","#contactcont"]);
+      displaynow("#homecont",["#codecont","#gallerycont","#contactcont","#aboutcont"]);
+      switchactive($(this).parent()[0]);
+      break;
+    }case "gallery":{
+      displaynow("#gallerycont",["#homecont","#contactcont","#codecont","#aboutcont"]);
       switchactive($(this).parent()[0]);
       break;
     }case "codes":{
-      displaynow("#codecont",["#homecont","#contactcont"]);
+      displaynow("#codecont",["#homecont","#gallerycont","#contactcont","#aboutcont"]);
+      switchactive($(this).parent()[0]);
+      break;
+    }case "about":{
+      displaynow("#aboutcont",["#homecont","#contactcont","#gallerycont","#codecont"]);
       switchactive($(this).parent()[0]);
       break;
     }case "contacts":{
-      displaynow("#contactcont",["#homecont","#codecont"]);
+      displaynow("#contactcont",["#homecont","#codecont","#gallerycont","#aboutcont"]);
       switchactive($(this).parent()[0]);
       break;
     }

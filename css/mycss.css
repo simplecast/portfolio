@@ -78,9 +78,18 @@ span{
   left: 0;
   right: 0;
   margin-top: 20vmin;
+  padding-left: 1vmin;
   font-size: 4.2vmin;
   font-family: 'Dancing Script', cursive;
   
+}
+.masthead-brand{
+  font-size: 2vmin;
+  font-weight: bold;
+}
+.rimg{
+  width: 10.5vmin !important;
+  height: 10.3vmin !important;
 }
 .clo{
   /*position: relative;*/
