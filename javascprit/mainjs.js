@@ -1,4 +1,5 @@
 var clicked;
+
 var ObjectIcons = function(){
   this.createElem = function(arg){
     return document.createElement(arg);
@@ -7,18 +8,26 @@ var ObjectIcons = function(){
   this.td = this.createElem('td');
   this.img = this.createElem('img');
   this.atag = this.createElem('a');
-  this.trs = new Array();
+  this.tds = new Array();
   
   this.atag.appendChild(this.img);
   this.td.appendChild(this.atag);
-  this.tr.appendChild(this.td);
+  this.tds.push(this.td);
+  for(var i=0; i < this.tds.length; i++)
+    this.tr.appendChild(this.tds[i]);
   
   this.addtd =function(){
     if(this.tr != undefined){
-    
+      this.tds.push(this.createnewTD());
+      for(var i=0; i < this.tds.length; i++)
+      this.tr.appendChild(this.tds[i]);
     }
   }
   
+  this.createnewTD = function(){
+    this.td = this.createElem('td');
+    return this.td;
+  }
   this.appendItem =  function(){
     return this.tr;
   }
@@ -26,10 +35,13 @@ var ObjectIcons = function(){
 
 var objs = new ObjectIcons();
 
+objs.addtd();
+objs.addtd();
 $('.iconss').append(objs.appendItem());
 
+
 //alert("here");
-$("a").click(function(){
+$("a").on('click touchstart',function(){
   clicked = $(this).data('id');
   switch(clicked){
     case "home":{
@@ -56,7 +68,7 @@ $("a").click(function(){
   }
 })
 var d = {"g":9,"y":[]};
-function displaynow(clas,a=[]){
+function displaynow(clas,a){
   $(clas).removeAttr('class',"clo");
   $(clas).attr('class',"cont");
   for(var i=0; i<a.length; i++){

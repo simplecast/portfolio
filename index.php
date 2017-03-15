@@ -16,9 +16,9 @@
       :root #content > #center > .dose > .dosesingle
       { display: none !important; }
     </style>
-    <script type="text/javascript" src="javascprit/arraylist.js"></script>
-    <script src="javascprit/jquery.mobile-1.4.5.min.js"></script>
-     <script type="text/javascript" src="javascprit/jquery-3.1.1.min.js"></script>
+<!--    <script type="text/javascript" src="javascprit/arraylist.js"></script>-->
+    
+    <script type="text/javascript" src="javascprit/jquery-3.1.1.min.js"></script>
     <link rel="stylesheet" href="css/mycss.css">
   </head>
   <body>
@@ -116,17 +116,18 @@
 
     </div>
 
-    <script type="text/javascript" src="javascprit/mainjs.js"></script>
+   
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
       <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="javascprit/jquery.mobile-1.4.5.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
       
       
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="javascprit/bootstrap.min.js"></script>
+    <script type="text/javascript" src="javascprit/bootstrap.min.js"></script>
+    <script type="text/javascript" src="javascprit/mainjs.js"></script>
     
   </body>
 </html>
