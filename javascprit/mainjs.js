@@ -7,6 +7,7 @@ var ObjectIcons = function(){
   this.td = this.createElem('td');
   this.img = this.createElem('img');
   this.atag = this.createElem('a');
+  this.trs = new Array();
   
   this.atag.appendChild(this.img);
   this.td.appendChild(this.atag);
