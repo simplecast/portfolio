@@ -35,19 +35,19 @@
               <nav>
                 <ul class="nav masthead-nav">
                   <li class="navtop active" data-id="home">
-                    <a href="#home" data-id="home">Home</a>
+                    <a class="navtags" href="#home" data-id="home">Home</a>
                   </li>
                   <li class="navtop" data-id="gallery" >
-                      <a href="#gallery" data-id="gallery">Gallery</a>
+                      <a class="navtags" href="#gallery" data-id="gallery">Gallery</a>
                   </li>
                   <li class="navtop" data-id="code" >
-                      <a href="#codes" data-id="codes">Codes</a>
+                      <a class="navtags" href="#codes" data-id="codes">Codes</a>
                   </li>
                   <li class="navtop" data-id="about" >
-                      <a href="#about" data-id="about">About Me</a>
+                      <a class="navtags" href="#about" data-id="about">About Me</a>
                   </li>
                   <li class="navtop" data-id="contact" >
-                    <a href="#contact" data-id="contacts">Contact</a>
+                    <a class="navtags" href="#contact" data-id="contacts">Contact</a>
                   </li>
               </ul>
             </nav>
@@ -55,15 +55,13 @@
           </div>
           <div class="inner cover">
             <div class="book">
-              <div class="closedleft">
-              </div>
               <div class="opened">
                 <div class="pages">
                   <div id="home" >
                     <div id="homecont" class="cont">
                      <div class="pagecont">
-                       <span>I love to program,learn and expand my knowledge in the field of technologies, and I will work hard to impress you. I  hope I help develop new technologies with your company<br>
-                       <a>Learn more about me?</a>
+                       <span>I love to program,learn and expand my knowledge in the field of technologies, and I will work hard to impress you. I  hope I can help develop new technologies with your company<br>
+                       <a class="learn">Learn more about me?</a>
                        </span>
                        
                      </div>
@@ -87,7 +85,22 @@
                   </div>
                   <div id="about" class="">
                     <div id="aboutcont" class="cont clo">
-                      <div class="pagecont"> 
+                      <div class="pagecont">
+                        <span class="aboutadjust">
+                          I love to program,learn and expand my knowledge in the field of technologies, and I will work hard to impress you. I  hope I can help develop new technologies with your company.
+                          <br><br>
+                          
+                          &nbsp; One of my goals is to reach my life long dream of becoming a great inventor like Nikla Tesla, but I understand that products must be made to sell for profit. I am into working with Raspberry pi's, Arduinos, and so I am into robotics.I have a two 3d printer one i built, and one I bought I preferr the Raise 3d printer, as Such i am into 3d modling also.I am teach myself enginerring for my intented goals.
+                          <br><br>
+                          
+                          &nbsp; I am also an artist I have been drawing since I was eight years old my style of art is realism, I like to do poraits of people. I can do 2d animations,and 3d animations and know how to use blender very well.I understand how Html 5 cavas work, and would love to make a web game. My Galleries will have all my works, and I will try to update this and my future youtube webpage.
+                          <br><br>
+                          
+                          <a class="learn navtop" href="#about">If You Would to See my resmue Click Here</a>
+                          
+                          
+                        </span>
+<!--                   
                         <div id="aboutpopup" class="popup">
                           <div class="container-fluid">
                             <div class="content">
@@ -95,6 +108,7 @@
                             </div>
                           </div>
                         </div>
+-->
                      </div>
                     </div>
                   </div>
@@ -107,15 +121,13 @@
                   </div>
                 </div>
               </div>
-              <div class="closedright"></div>
-            </div>
             
           </div>
 
           <div class="mastfoot">
             
           </div>
-
+          </div>
         </div>
       </div>
 
