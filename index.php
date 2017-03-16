@@ -88,7 +88,13 @@
                   <div id="about" class="">
                     <div id="aboutcont" class="cont clo">
                       <div class="pagecont"> 
-                       Under Construction
+                        <div id="aboutpopup" class="popup">
+                          <div class="container-fluid">
+                            <div class="content">
+                              here
+                            </div>
+                          </div>
+                        </div>
                      </div>
                     </div>
                   </div>
@@ -111,7 +117,6 @@
           </div>
 
         </div>
-
       </div>
 
     </div>
