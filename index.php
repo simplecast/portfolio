@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Kishon A. Diaz</title>
-    <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P|Shrikhand" rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     
     <link href="css/cover.css" rel="stylesheet">
@@ -20,6 +20,9 @@
     
     <script type="text/javascript" src="javascprit/jquery-3.1.1.min.js"></script>
     <link rel="stylesheet" href="css/mycss.css">
+    <script type="text/javascript" src="javascprit/three.js-master/build/three.js"></script>
+    <script type="text/javascript" src="javascprit/three.js-master/examples/js/Detector.js"></script>
+    <script type="text/javascript" src="javascprit/three.js-master/examples/js/renderers/CanvasRenderer.js"></script>
   </head>
   <body>
     <div class="site-wrapper">
@@ -27,6 +30,8 @@
       <div class="site-wrapper-inner">
 
         <div class="cover-container ">
+        <canvas id="backgroundCanvas">
+        </canvas>
 
           <div class="masthead clearfix">
             <div class="inner">
@@ -67,19 +72,18 @@
                      </div>
                     </div>
                   </div>
-                 
-                  <div id="code" class="">
-                    <div id="codecont" class="cont clo">
+                  <div id="gallery" class="">
+                    <div id="gallerycont" class="cont clo">
                       <div class="pagecont"> 
                        <table class="iconss"> 
                        </table>
                      </div>
                     </div>
                   </div>
-                  <div id="gallery" class="">
-                    <div id="gallerycont" class="cont clo">
+                  <div id="code" class="">
+                    <div id="codecont" class="cont clo">
                       <div class="pagecont"> 
-                       Under Construction
+                       
                      </div>
                     </div>
                   </div>
@@ -144,7 +148,10 @@
       
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script type="text/javascript" src="javascprit/bootstrap.min.js"></script>
+    <script type="text/javascript" src="javascprit/three.js-master/build/three.js"></script>
+    <script type="text/javascript" src="javascprit/background.js"></script>
     <script type="text/javascript" src="javascprit/mainjs.js"></script>
+    
     
   </body>
 </html>
