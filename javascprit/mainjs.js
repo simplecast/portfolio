@@ -66,7 +66,6 @@ var ObjectIcons = function(){
   
   this.addcount = 0;
   this.addtd =function(type,olist){
-    console.log(olist.index);
     this.tds[this.addcount] = this.createnewObj(type,olist);
     for(var i=0; i < this.trs.length; i++){
       if(this.trs[i] != undefined){
