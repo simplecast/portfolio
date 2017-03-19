@@ -4,10 +4,10 @@ var ObjectIcons = function(){
   this.createElem = function(arg){
     return document.createElement(arg);
   }
-  this.tr = this.createElem('tr');
-//  this.td = this.createElem('td');
-//  this.img = this.createElem('img');
-//  this.atag = this.createElem('a');
+//  this.tr = this.createElem('tr');
+////  this.td = this.createElem('td');
+////  this.img = this.createElem('img');
+////  this.atag = this.createElem('a');
   this.trs = new Array();
   this.tds = new Array();
   
@@ -50,6 +50,17 @@ var ObjectIcons = function(){
 
           
           break;
+        }case "img":{
+          
+          this.ob = this.createElem('img');
+          
+          if(jlist.src != null){
+            this.ob.setAttribute('src', jlist.src);
+          }
+          if(jlist.alt != null)
+            this.ob.alt =  jlist.alt;
+          
+          break;
         }
         default:{
           
@@ -57,8 +68,11 @@ var ObjectIcons = function(){
         }
     
     }
-    if(this.ob != null)
-    this.atag.appendChild(this.ob);
+    
+    if(this.ob != null || this.ob != undefined){
+      console.log(this.ob);
+      this.atag.appendChild(this.ob);
+    }
     this.td.appendChild(this.atag);
     return this.td;
   }
@@ -87,14 +101,20 @@ var ObjectIcons = function(){
 }
 
 var objs = new ObjectIcons();
-
+var cobjs = new ObjectIcons();
 objs.newRow();
 objs.addtd('button',{text:"2D\ndrawing",index:0});
 objs.addtd('button',{text:"3D\nmodels",index:0});
 objs.newRow();
 objs.addtd('button',{text:"2D\nAnime",index:1});
 objs.addtd('button',{text:"3D\nAnime",index:1});
+
+cobjs.newRow();
+cobjs.addtd('img',{src:"assets/Android_robot.png",alt:"android",index:0});
+cobjs.newRow();
+
 $('.iconss').append(objs.appendItem());
+$('.iconscode').append(cobjs.appendItem());
 
 
 //alert("here");
