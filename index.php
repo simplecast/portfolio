@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Kishon A. Diaz</title>
-    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P|Shrikhand" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Shrikhand" rel="stylesheet">
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     
     <link href="css/cover.css" rel="stylesheet">
@@ -67,9 +68,9 @@
                   <div id="home" >
                     <div id="homecont" class="cont">
                      <div class="pagecont">
-                       <span>I love to program,learn and expand my knowledge in the field of technologies, and I will work hard to impress you. I  hope I can help develop new technologies with your company<br>
+                       <div class="span">I love to program,learn and expand my knowledge in the field of technologies, and I will work hard to impress you. I  hope I can help develop new technologies with your company<br>
                        <a class="learn">Learn more about me?</a>
-                       </span>
+                       </div>
                        
                      </div>
                     </div>
@@ -93,7 +94,7 @@
                   <div id="about" class="">
                     <div id="aboutcont" class="cont clo">
                       <div class="pagecont">
-                        <span class="aboutadjust">
+                        <div class="span aboutadjust">
                           I love to program,learn and expand my knowledge in the field of technologies, and I will work hard to impress you. I  hope I can help develop new technologies with your company.
                           <br><br>
                           
@@ -106,7 +107,7 @@
                           <a class="learn navtop" href="#about">If You Would to See my resmue Click Here</a>
                           
                           
-                        </span>
+                        </div>
 <!--                   
                         <div id="aboutpopup" class="popup">
                           <div class="container-fluid">
@@ -122,9 +123,21 @@
                   <div id="contact" class="">
                     <div id="contactcont" class="cont clo">
                       <div class="pagecont"> 
-                       <form>
-                         
-                       </form>
+                       <div class="span">
+                         If you would like to contact me for job oppertuinies, or for my freelance coding assiteence with your projects my upworks profile is <br>
+                         <table class="linktable">
+                           <tr>
+                            <td class="linktr">
+                              <a href="https://www.upwork.com/o/profiles/users/_~01fde4b6749f2fff7c/"><img class="links" src="assets/upwork.png" alt="upworks_link" width="300" height="300">
+                              </a>
+                             </td>
+                             <td class="linktr">
+                              <a href="#gmail"><img class="links" src="assets/Gmail_Icon.png" alt="upworks_link" width="300" height="300">
+                              </a>
+                             </td>
+                           </tr>
+                         </table>
+                       </div>
                       </div>
                     </div>
                   </div>

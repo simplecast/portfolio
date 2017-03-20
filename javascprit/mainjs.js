@@ -52,7 +52,10 @@ var ObjectIcons = function(){
           break;
         }case "img":{
           
+          this.td.style.cssText = "position: relative;"
+          +"padding-left: 3vmin;padding-right: 3vmin;";
           this.ob = this.createElem('img');
+          this.ob.setAttribute('class','iconimgs')
           
           if(jlist.src != null){
             this.ob.setAttribute('src', jlist.src);
@@ -111,7 +114,14 @@ objs.addtd('button',{text:"3D\nAnime",index:1});
 
 cobjs.newRow();
 cobjs.addtd('img',{src:"assets/Android_robot.png",alt:"android",index:0});
+cobjs.addtd('img',{src:"assets/C_plus_plus.svg.png",alt:"android",index:0});
+cobjs.addtd('img',{src:"assets/C_sharp_wordmark.svg.png",alt:"android",index:0});
+cobjs.addtd('img',{src:"assets/java-logo.png",alt:"android",index:0});
+cobjs.addtd('img',{src:"assets/CSS3_and_HTML5_logos_and_wordmarks.svg.png",alt:"android",index:0});
 cobjs.newRow();
+cobjs.addtd('img',{src:"assets/javaScript-logo.png",alt:"android",index:1});
+cobjs.addtd('img',{src:"assets/PHP-logo.svg.png",alt:"android",index:1});
+cobjs.addtd('img',{src:"assets/Python-logo-notext.svg.png",alt:"android",index:1});
 
 $('.iconss').append(objs.appendItem());
 $('.iconscode').append(cobjs.appendItem());
