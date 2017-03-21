@@ -65,6 +65,7 @@
             <div class="book">
               <div class="opened">
                 <div class="pages">
+                  
                   <div id="home" >
                     <div id="homecont" class="cont">
                      <div class="pagecont">

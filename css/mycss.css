@@ -196,7 +196,7 @@ br{
   z-index: 2;
   left:0;
   right:0;
-  top: 20%;
+  top: 18%;
   bottom: 0;
   margin: auto auto auto auto;
   min-height: 40%;
@@ -229,8 +229,20 @@ span.aboutadjust{
 }
 @media (max-width: 767px){
   #aboutcont{
-    top:88vmin;
+    top:60vmin;
     width: 100%;
+    overflow-x: scroll;
+  }
+  .aboutadjust{
+    position: relative;
+    overflow-x: scroll;
+    background: green;
+    font-size: 3.2vmin;
+    top: -60px;
+    margin-bottom: 1vmin;
+  }
+  .pagecont {
+    overflow-x: scroll;
   }
   .masthead {
     position: relative;
