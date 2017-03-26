@@ -107,6 +107,12 @@
                           
                           <a class="learn navtop" href="#about">If You Would to See my resmue Click Here</a>
                           
+                          <br>
+                          <br>
+                          <br>
+                          <br>
+                          <br>
+                          
                           
                         </div>
 <!--                   
@@ -138,6 +144,16 @@
                              </td>
                            </tr>
                          </table>
+                         
+                       </div>
+                        <div class="message_area">
+                         <form class="form-inline">
+                            <input type="text" placeholder="First Name">
+                            <input placeholder="Last Name">
+                            <input placeholder="email">
+                            <input placeholder="phone">
+                            <textarea></textarea>
+                         </form>
                        </div>
                       </div>
                     </div>

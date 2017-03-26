@@ -112,9 +112,12 @@ br{
   right: 0;
   margin-top: 20vmin;
   padding-left: 1vmin;
-  font-size: 3.2vmin;
+  font-size: 2.7vmin;
   font-family: 'Shrikhand', cursive;
   
+}
+.message_area{
+  color: black;
 }
 .masthead-brand{
   font-size: 1em;
