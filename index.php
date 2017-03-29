@@ -147,12 +147,16 @@
                          
                        </div>
                         <div class="message_area">
-                         <form class="form-inline">
-                            <input type="text" placeholder="First Name">
-                            <input placeholder="Last Name">
-                            <input placeholder="email">
-                            <input placeholder="phone">
+                         <form >
+                            <div class="input_cont">
+                              <span></span>
+                              <input type="text" placeholder="First Name">
+                            </div><br>
+                            <input placeholder="Last Name"><br>
+                            <input placeholder="email"><br>
+                            <input placeholder="phone"><br>
                             <textarea></textarea>
+                          
                          </form>
                        </div>
                       </div>
