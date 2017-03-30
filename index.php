@@ -149,14 +149,37 @@
                         <div class="message_area">
                          <form >
                             <div class="input_cont">
-                              <span></span>
+                              <span class="helper_txt"></span>
                               <input type="text" placeholder="First Name">
+                              <span class="error_txt">Error</span>
                             </div><br>
-                            <input placeholder="Last Name"><br>
-                            <input placeholder="email"><br>
-                            <input placeholder="phone"><br>
-                            <textarea></textarea>
-                          
+                            <div class="input_cont">
+                              <span class="helper_txt"></span>
+                              <input placeholder="Last Name">
+                              <span class="error_txt">Error</span>
+                            </div><br>
+                            <div class="input_cont">
+                              <span class="helper_txt"></span>
+                              <input placeholder="Email">
+                              <span class="error_txt">Error</span>
+                            </div><br>
+                            <div class="input_cont">
+                              <span class="helper_txt"></span>
+                              <input placeholder="Phone Number">
+                              <span class="error_txt">Error</span>
+                            </div><br>
+                            <div class="input_cont">
+                              <span class="helper_txt"></span>
+                              <textarea placeholder="Message"></textarea>
+                              <span class="error_txt">Error</span>
+                            </div><br>
+                           <div class="">
+                              <span class="helper_txt"></span>
+                              <input type="submit" value="Send">
+                              <input type="reset" value="Reset">
+                              <span class="error_txt">Error</span>
+                            </div><br>
+                            
                          </form>
                        </div>
                       </div>
