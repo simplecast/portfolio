@@ -128,7 +128,7 @@ $('.iconscode').append(cobjs.appendItem());
 
 
 //alert("here");
-$("a").on('click touchstart',function(){
+$(".navtags").on('click touchstart',function(){
   clicked = $(this).data('id');
   switch(clicked){
     case "home":{
@@ -154,6 +154,21 @@ $("a").on('click touchstart',function(){
     }
   }
 })
+
+$(".contact_click").on('click touchstart',function(){
+  var conclick =  $(this).data('id');
+  switch(conclick){
+    case "gmail":{
+      $(".linkcont").attr('class','linkcount span clo');
+      $(".linkcont").attr('class','linkcount');
+      //$(".message_area").removeAttr('class','clo');
+      $(".message_area").attr('class','message_area');
+      console.log($(this).parent(0).parent(0).parent(0).parent(0));
+      //$(".contpage").css('overflow',"hidden");
+    }    
+  }
+  
+});
 var d = {"g":9,"y":[]};
 function displaynow(clas,a){
   $(clas).removeAttr('class',"clo");

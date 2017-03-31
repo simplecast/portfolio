@@ -129,25 +129,27 @@
                   </div>
                   <div id="contact" class="">
                     <div id="contactcont" class="cont clo">
-                      <div class="pagecont"> 
-                       <div class="span">
+                      <div class="pagecont contpage "> 
+                       <div class="span linkcont">
                          If you would like to contact me for job oppertuinies, or for my freelance coding assiteence with your projects my upworks profile is <br>
-                         <table class="linktable">
+                         <table class="linktable ">
                            <tr>
                             <td class="linktr">
-                              <a href="https://www.upwork.com/o/profiles/users/_~01fde4b6749f2fff7c/"><img class="links" src="assets/upwork.png" alt="upworks_link" width="300" height="300">
+                              <a class="contact_click" href="https://www.upwork.com/o/profiles/users/_~01fde4b6749f2fff7c/"><img class="links" src="assets/upwork.png" alt="upworks_link" width="300" height="300">
                               </a>
                              </td>
                              <td class="linktr">
-                              <a href="#gmail"><img class="links" src="assets/Gmail_Icon.png" alt="upworks_link" width="300" height="300">
+                              <a class="contact_click" href="#gmail" data-id="gmail"><img class="links" src="assets/Gmail_Icon.png" alt="upworks_link" width="300" height="300">
                               </a>
                              </td>
                            </tr>
                          </table>
                          
                        </div>
-                        <div class="message_area">
+                        <div class="message_area clo">
+                          <a href="#close"><img class="closebtn" src="assets/Remove_sign_font_awesome.svg.png" width="255" height="255" alt="close"></a>
                          <form >
+                            
                             <div class="input_cont">
                               <span class="helper_txt"></span>
                               <input type="text" placeholder="First Name">

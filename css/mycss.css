@@ -123,25 +123,26 @@ br{
   left: 0;
   right: 0;
   color: black;
-  margin-top: 16vmin;
+  margin-top: 15vmin;
   padding-left: 1vmin;
   font-size: 2.7vmin;
   font-family:sans-serif;
   
+  
 }
 .input_cont{
-  background: white;
+  
   width: 19vmin;
-  border-radius: 10px;
+  border-radius: 1vmin;
 }
 
 .input_cont>input {
   width: 22vmin;
-  border-radius: 10px;
+  border-radius: 1vmin;
 }
 .input_cont>textarea {
   width: 22vmin;
-  border-radius: 10px;
+  border-radius: 1vmin;
 }
 .input_cont>.helper_txt {
   position: absolute;
@@ -155,8 +156,17 @@ br{
   position: absolute;
   height: 1vmin;
   font-size: 2vmin;
-  transform:  translate(.6px,6px) scale(1,1);
+  transform:  translate(15vmin,-1vmin) scale(1,1);
+  
   z-index: 30;
+}
+.closebtn {
+  position: absolute;
+  width: 5vmin;
+  height: 5vmin;
+  right:10vmin;
+  top: -7vmin;
+  float: right;
 }
 .masthead-brand{
   font-size: 1em;
