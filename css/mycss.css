@@ -291,10 +291,10 @@ span.aboutadjust{
     background: green;
     font-size: 3.2vmin;
     top: -60px;
-    margin-bottom: 1vmin;
+    margin-bottom: 20vmin;
   }
   .pagecont {
-    overflow-x: scroll;
+    overflow: scroll;
   }
   .masthead {
     position: relative;
@@ -333,7 +333,10 @@ span.aboutadjust{
   #aboutcont{
    
     margin-top: 1vmin;
-    top:69vmin;
+    top:86vmin;
+  }
+  .pagecont{
+    overflow: scroll;
   }
 }
 @media (max-width:360px) and (max-height: 568px){
