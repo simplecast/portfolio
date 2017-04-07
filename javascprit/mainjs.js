@@ -163,9 +163,15 @@ $(".contact_click").on('click touchstart',function(){
       $(".linkcont").attr('class','linkcount');
       //$(".message_area").removeAttr('class','clo');
       $(".message_area").attr('class','message_area');
-      console.log($(this).parent(0).parent(0).parent(0).parent(0));
-      //$(".contpage").css('overflow',"hidden");
-    }    
+      //console.log($(this).parent(0).parent(0).parent(0).parent(0));
+      $(".contpage").css('overflow',"hidden");
+      break;
+    }
+    case "close":{
+      alert($(this).text());
+      copyToClipboard($(this).text());
+      break;
+    }
   }
   
 });
@@ -194,5 +200,13 @@ function displaycurrent(clas, val){
       $("#"+$(".pages").children(i).get(i).id).attr('class',"clo"); 
     }
   }
+}
+/*https://codepen.io/shaikmaqsood/pen/XmydxJ/*/
+function copyToClipboard(element) {
+  var $temp = $("<input>");
+  $("body").append($temp);
+  $temp.val($(element).text()).select();
+  document.execCommand("copy");
+  $temp.remove();
 }
 

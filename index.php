@@ -147,8 +147,14 @@
                          
                        </div>
                         <div class="message_area clo">
-                          <a href="#close"><img class="closebtn" src="assets/Remove_sign_font_awesome.svg.png" width="255" height="255" alt="close"></a>
-                         <form >
+                          
+                          <div class="span">
+                            Email Me At<br>
+                            <a href="#close" class="contact_click" data-id="close">kishon.a.diaz@gmail.com</a>
+                          </div>
+                          <input id="clipboard" type="text" hidden="hidden">
+                         <!--<form >
+
                             
                             <div class="input_cont">
                               <span class="helper_txt"></span>
