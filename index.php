@@ -130,7 +130,7 @@
                   <div id="contact" class="">
                     <div id="contactcont" class="cont clo">
                       <div class="pagecont contpage "> 
-                       <div class="span linkcont">
+                       <div class="linkcont span">
                          If you would like to contact me for job oppertuinies, or for my freelance coding assiteence with your projects my upworks profile is <br>
                          <table class="linktable ">
                            <tr>
@@ -150,7 +150,7 @@
                           
                           <div class="span">
                             Email Me At<br>
-                            <a href="#close" class="contact_click" data-id="close">kishon.a.diaz@gmail.com</a>
+                            <a href="#close" id="myemail" class="contact_click" data-id="close">kishon.a.diaz@gmail.com</a>
                           </div>
                           <input id="clipboard" type="text" hidden="hidden">
                          <!--<form >

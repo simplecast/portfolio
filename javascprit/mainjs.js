@@ -168,12 +168,19 @@ $(".contact_click").on('click touchstart',function(){
       break;
     }
     case "close":{
-      alert($(this).text());
-      copyToClipboard($(this).text());
+      alert("here");
+      $(".message_area").attr('class','message_area clo');
+      $(".linkcont .span .clo").attr('class','linkcount span');
+      $(".linkcont").attr('class','linkcount');
+      
       break;
     }
   }
   
+});
+$("#myemail").on("touchstart click ",function(){
+  $(".linkcont").removeAttr('class','clo');
+  copyToClipboard("#myemail");
 });
 var d = {"g":9,"y":[]};
 function displaynow(clas,a){
@@ -203,6 +210,7 @@ function displaycurrent(clas, val){
 }
 /*https://codepen.io/shaikmaqsood/pen/XmydxJ/*/
 function copyToClipboard(element) {
+  //alert($(element).text());
   var $temp = $("<input>");
   $("body").append($temp);
   $temp.val($(element).text()).select();
