@@ -55,7 +55,7 @@ var ObjectIcons = function(){
           this.td.style.cssText = "position: relative;"
           +"padding-left: 3vmin;padding-right: 3vmin;";
           this.ob = this.createElem('img');
-          this.ob.setAttribute('class','iconimgs')
+          this.ob.setAttribute('class','iconimgs btnclass');
           
           if(jlist.src != null){
             this.ob.setAttribute('src', jlist.src);
@@ -106,22 +106,22 @@ var ObjectIcons = function(){
 var objs = new ObjectIcons();
 var cobjs = new ObjectIcons();
 objs.newRow();
-objs.addtd('button',{text:"2D\ndrawing",index:0});
-objs.addtd('button',{text:"3D\nmodels",index:0});
+objs.addtd('button',{text:"Art",index:0});
+objs.addtd('button',{text:"Arduino",index:0});
 objs.newRow();
-objs.addtd('button',{text:"2D\nAnime",index:1});
-objs.addtd('button',{text:"3D\nAnime",index:1});
+objs.addtd('button',{text:"Raspberry Pi",index:1});
+objs.addtd('button',{text:"LattePanda",index:1});
 
 cobjs.newRow();
-cobjs.addtd('img',{src:"assets/Android_robot.png",alt:"android",index:0});
-cobjs.addtd('img',{src:"assets/C_plus_plus.png",alt:"android",index:0});
-cobjs.addtd('img',{src:"assets/C_Sharp.png",alt:"android",index:0});
-cobjs.addtd('img',{src:"assets/java-logo.png",alt:"android",index:0});
-cobjs.addtd('img',{src:"assets/CSS3_and_HTML5_logos_and_wordmarks.svg.png",alt:"android",index:0});
+cobjs.addtd('img',{src:"assets/images/Android_robot.png",alt:"android",index:0});
+cobjs.addtd('img',{src:"assets/images/C_plus_plus.png",alt:"android",index:0});
+cobjs.addtd('img',{src:"assets/images/C_Sharp.png",alt:"android",index:0});
+cobjs.addtd('img',{src:"assets/images/java-logo.png",alt:"android",index:0});
+cobjs.addtd('img',{src:"assets/images/CSS3_and_HTML5_logos_and_wordmarks.svg.png",alt:"android",index:0});
 cobjs.newRow();
-cobjs.addtd('img',{src:"assets/JavaScript_logo.png",alt:"android",index:1});
-cobjs.addtd('img',{src:"assets/PHP-logo.svg.png",alt:"android",index:1});
-cobjs.addtd('img',{src:"assets/Python-logo-notext.svg.png",alt:"android",index:1});
+cobjs.addtd('img',{src:"assets/images/JavaScript_logo.png",alt:"android",index:1});
+cobjs.addtd('img',{src:"assets/images/PHP-logo.svg.png",alt:"android",index:1});
+cobjs.addtd('img',{src:"assets/images/Python-logo-notext.svg.png",alt:"android",index:1});
 
 $('.iconss').append(objs.appendItem());
 $('.iconscode').append(cobjs.appendItem());
@@ -132,24 +132,29 @@ $(".navtags").on('click touchstart',function(){
   clicked = $(this).data('id');
   switch(clicked){
     case "home":{
-      displaynow("#homecont",["#codecont","#gallerycont","#contactcont","#aboutcont"]);
+      displaynow("#homecont",["#codecont","#projectcont","#contactcont","#aboutcont"]);
       switchactive($(this).parent()[0]);
+      resetclasses();
       break;
-    }case "gallery":{
-      displaynow("#gallerycont",["#homecont","#contactcont","#codecont","#aboutcont"]);
+    }case "projects":{
+      displaynow("#projectcont",["#homecont","#contactcont","#codecont","#aboutcont"]);
       switchactive($(this).parent()[0]);
+      resetclasses();
       break;
     }case "codes":{
-      displaynow("#codecont",["#homecont","#gallerycont","#contactcont","#aboutcont"]);
+      displaynow("#codecont",["#homecont","#projectcont","#contactcont","#aboutcont"]);
       switchactive($(this).parent()[0]);
+      resetclasses();
       break;
     }case "about":{
-      displaynow("#aboutcont",["#homecont","#contactcont","#gallerycont","#codecont"]);
+      displaynow("#aboutcont",["#homecont","#contactcont","#projectcont","#codecont"]);
       switchactive($(this).parent()[0]);
+      resetclasses();
       break;
     }case "contacts":{
-      displaynow("#contactcont",["#homecont","#codecont","#gallerycont","#aboutcont"]);
+      displaynow("#contactcont",["#homecont","#codecont","#projectcont","#aboutcont"]);
       switchactive($(this).parent()[0]);
+      resetclasses();
       break;
     }
   }
@@ -159,29 +164,35 @@ $(".contact_click").on('click touchstart',function(){
   var conclick =  $(this).data('id');
   switch(conclick){
     case "gmail":{
-      $(".linkcont").attr('class','linkcount span clo');
+      $("#messagezone").removeClass('clo');
+      $("#messagezone").addClass('message_area');
+      $("#contactinf").addClass('linkcount span clo');
+      /*$(".linkcont").attr('class','linkcount span clo');
       $(".linkcont").attr('class','linkcount');
       //$(".message_area").removeAttr('class','clo');
       $(".message_area").attr('class','message_area');
-      //console.log($(this).parent(0).parent(0).parent(0).parent(0));
+      //console.log($(this).parent(0).parent(0).parent(0).parent(0));*/
       $(".contpage").css('overflow',"hidden");
       break;
     }
-    case "close":{
-      alert("here");
-      $(".message_area").attr('class','message_area clo');
-      $(".linkcont .span .clo").attr('class','linkcount span');
-      $(".linkcont").attr('class','linkcount');
-      
-      break;
-    }
+   
   }
   
 });
 $("#myemail").on("touchstart click ",function(){
-  $(".linkcont").removeAttr('class','clo');
+  $("#contactinf").removeClass('.linkcont span clo');
+  $(".message_area").addClass('message_area clo');
+  $("#contactinf").addClass('linkcount span');
   copyToClipboard("#myemail");
+  
+  //$(".linkcont").removeAttr('class','linkcount');
 });
+
+/*$(".btnclass").on("touchstart click",function(){
+  document.location = "./pages/display.php";
+});*/
+
+$(".btnclass").attr('onclick','<?php echo "here" ?>')
 var d = {"g":9,"y":[]};
 function displaynow(clas,a){
   $(clas).removeAttr('class',"clo");
@@ -217,4 +228,11 @@ function copyToClipboard(element) {
   document.execCommand("copy");
   $temp.remove();
 }
+
+function resetclasses(){
+  $("#contactinf").removeClass('.linkcont span clo');
+  $(".message_area").addClass('message_area clo');
+  $("#contactinf").addClass('linkcount span');
+} 
+
 

@@ -7,9 +7,9 @@
     <title>Kishon A. Diaz</title>
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Shrikhand" rel="stylesheet">
-    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
     
-    <link href="css/cover.css" rel="stylesheet">
+    <link href="../css/cover.css" rel="stylesheet">
     <style type="text/css">
       :root .carbonad,
       :root #carbonads-container,
@@ -19,13 +19,11 @@
     </style>
 <!--    <script type="text/javascript" src="javascprit/arraylist.js"></script>-->
     
-    <script type="text/javascript" src="javascprit/jquery-3.1.1.min.js"></script>
-    <link rel="stylesheet" href="css/mycss.css">
-<!--
-    <script type="text/javascript" src="javascprit/three.js-master/build/three.js"></script>
-    <script type="text/javascript" src="javascprit/three.js-master/examples/js/Detector.js"></script>
-    <script type="text/javascript" src="javascprit/three.js-master/examples/js/renderers/CanvasRenderer.js"></script>
--->
+    <script type="text/javascript" src="../javascprit/jquery-3.1.1.min.js"></script>
+    <link rel="stylesheet" href="../css/mycss.css">
+    <script type="text/javascript" src="../javascprit/three.js-master/build/three.js"></script>
+    <script type="text/javascript" src="../javascprit/three.js-master/examples/js/Detector.js"></script>
+    <script type="text/javascript" src="../javascprit/three.js-master/examples/js/renderers/CanvasRenderer.js"></script>
   </head>
   <body>
     <div class="site-wrapper">
@@ -38,7 +36,7 @@
 
           <div class="masthead clearfix">
             <div class="inner">
-              <img class=" masthead-brand img-circle rimg" src="assets/images/kishon_image.png" alt="Picture of Kishon Diaz" width="369" height="415">
+              <img class=" masthead-brand img-circle rimg" src="../assets/images/kishon_image.png" alt="Picture of Kishon Diaz" width="369" height="415">
               <h3 class="masthead-brand">Kishon A. Diaz</h3>
               <nav>
                 <ul class="nav masthead-nav">
@@ -61,7 +59,7 @@
             </nav>
             </div>
           </div>
-          <div class="inner cover">
+          <!--<div class="inner cover">
             <div class="book">
               <div class="opened">
                 <div class="pages">
@@ -115,7 +113,6 @@
                           
                           
                         </div>
-<!--                   
                         <div id="aboutpopup" class="popup">
                           <div class="container-fluid">
                             <div class="content">
@@ -123,7 +120,6 @@
                             </div>
                           </div>
                         </div>
--->
                      </div>
                     </div>
                   </div>
@@ -152,7 +148,7 @@
                             Email Me At<br>
                             <a href="#close" id="myemail" class="contact_click" data-id="close">kishon.a.diaz@gmail.com</a>
                           </div>
-                          <input id="clipboard" type="text" hidden="hidden">
+                          <input id="clipboard" type="text" hidden="hidden">-->
                          <!--<form >
 
                             
@@ -217,12 +213,12 @@
       
       
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script type="text/javascript" src="javascprit/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../javascprit/bootstrap.min.js"></script>
 <!--
     <script type="text/javascript" src="javascprit/three.js-master/build/three.js"></script>
     <script type="text/javascript" src="javascprit/background.js"></script>
 -->
-    <script type="text/javascript" src="javascprit/mainjs.js"></script>
+    <script type="text/javascript" src="../javascprit/mainjs.js"></script>
     
     
   </body>

@@ -203,17 +203,17 @@ br{
 .btnclass{
   background-color: transparent;
   border: none;
-  font-family: 'Press Start 2P', cursive;
+  font-family: 'Shrikhand', cursive;
 }.btnclass:hover{
   background-color: lightgray;
   border: none;
-  font-family: 'Press Start 2P', cursive;
+  font-family: 'Shrikhand', cursive;
 }
 .btnclass:active{
   background-color: white;
   color:black;
   border: none;
-  font-family: 'Press Start 2P', cursive;
+  font-family: 'Shrikhand', cursive;
 }
 
 .iconimgs{
