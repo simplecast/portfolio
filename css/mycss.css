@@ -346,3 +346,9 @@ span.aboutadjust{
     top:76vmin;
   }
 }
+@media (max-height:760){
+  .pagecont{
+    background: blue;
+    min-height: 300px;
+  }
+}
