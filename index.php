@@ -69,7 +69,7 @@
                   <div id="home" >
                     <div id="homecont" class="cont">
                      <div class="pagecont">
-                       <div class="span">I love to program,learn and expand my knowledge in the field of technologies, and I will work hard to impress you. I  hope I can help develop new technologies with your company<br>
+                       <div class="span">I love to program, learn and expand my knowledge in the field of technologies, and I will work hard to impress you. I hope I can help develop new technologies with your company<br>
                        <a class="learn">Learn more about me?</a>
                        </div>
                        
@@ -96,16 +96,16 @@
                     <div id="aboutcont" class="cont clo">
                       <div class="pagecont">
                         <div class="span aboutadjust">
-                          I love to program,learn and expand my knowledge in the field of technologies, and I will work hard to impress you. I  hope I can help develop new technologies with your company.
+                          I love to program, learn and expand my knowledge in the field of technologies, and I will work hard to impress you. I hope I can help develop new technologies with your company. 
                           <br><br>
                           
-                          &nbsp; One of my goals is to reach my life long dream of becoming a great inventor like Nikla Tesla, but I understand that products must be made to sell for profit. I am into working with Raspberry pi's, Arduinos, and so I am into robotics.I have a two 3d printer one i built, and one I bought I preferr the Raise 3d printer, as Such i am into 3d modling also.I am teach myself enginerring for my intented goals.
+                          &nbsp; One of my goals is to reach my lifelong dream of becoming a great inventor like Nikola Tesla, but I understand that products must be made to sell for profit. I am into working with Raspberry pi's, Arduinos, and so I am into robotics. I have a two 3d printer one I built, and one I bought I prefer the Raise 3d printer, as Such I am into 3d modeling also. I am teach myself engineering for my intended goals. 
                           <br><br>
                           
-                          &nbsp; I am also an artist I have been drawing since I was eight years old my style of art is realism, I like to do poraits of people. I can do 2d animations,and 3d animations and know how to use blender very well.I understand how Html 5 cavas work, and would love to make a web game. My Galleries will have all my works, and I will try to update this and my future youtube webpage.
+                          &nbsp; I am also an artist I have been drawing since I was eight years old my style of art is realism, I like to do portrait of people. I can do 2d animations, and 3d animations and know how to use blender very well. I understand how Html 5 canvas work, and would love to make a web game. My Galleries will have all my works.
                           <br><br>
                           
-                          <a class="learn navtop" href="#about">If You Would to See my resmue Click Here</a>
+                          <a class="learn navtop" href="#about">If You Would to See my resume Click Here </a>
                           
                           <br>
                           <br>
@@ -131,7 +131,7 @@
                     <div id="contactcont" class="cont clo">
                       <div class="pagecont contpage "> 
                        <div id="contactinf" class="linkcont span">
-                         If you would like to contact me for job oppertuinies, or for my freelance coding assiteence with your projects my upworks profile is <br>
+                         If you would like to contact me for job opportunities, or for my freelance coding assistance with your projects my up works profile is <br>
                          <table class="linktable ">
                            <tr>
                             <td class="linktr">
