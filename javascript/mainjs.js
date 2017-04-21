@@ -73,7 +73,7 @@ var ObjectIcons = function(){
     }
     
     if(this.ob != null || this.ob != undefined){
-      console.log(this.ob);
+      //console.log(this.ob);
       this.atag.appendChild(this.ob);
     }
     this.td.appendChild(this.atag);
@@ -212,7 +212,7 @@ function switchactive(aobj){
 }
 function displaycurrent(clas, val){
   $(clas).removeAttr('class',"clo");
-  console.log($(clas));
+  //console.log($(clas));
   for(var i=0; i < $(".pages")[0].childElementCount; i++){
     if($(".pages").children(i).get(i).id != val){   
       $("#"+$(".pages").children(i).get(i).id).attr('class',"clo"); 

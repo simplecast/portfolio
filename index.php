@@ -8,7 +8,6 @@
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Shrikhand" rel="stylesheet">
     <link rel="stylesheet" href="./css/bootstrap.min.css">
-    
     <link href="css/cover.css" rel="stylesheet">
     <style type="text/css">
       :root .carbonad,
@@ -17,18 +16,16 @@
       :root #content > #center > .dose > .dosesingle
       { display: none !important; }
     </style>
-<!--    <script type="text/javascript" src="javascprit/arraylist.js"></script>-->
+<!--    <script type="text/javascript" src="javascript/arraylist.js"></script>-->
     
-    <script type="text/javascript" src="javascprit/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="javascript/jquery-3.1.1.min.js"></script>
     <link rel="stylesheet" href="css/mycss.css">
-<!--
-    <script type="text/javascript" src="javascprit/three.js-master/build/three.js"></script>
-    <script type="text/javascript" src="javascprit/three.js-master/examples/js/Detector.js"></script>
-    <script type="text/javascript" src="javascprit/three.js-master/examples/js/renderers/CanvasRenderer.js"></script>
--->
+    <script type="text/javascript" src="javascript/three.js-master/build/three.js"></script>
+    <script type="text/javascript" src="javascript/three.js-master/examples/js/Detector.js"></script>
+    <script type="text/javascript" src="javascript/three.js-master/examples/js/renderers/CanvasRenderer.js"></script>
   </head>
   <body>
-    <div class="site-wrapper">
+   <div class="site-wrapper">
 
       <div class="site-wrapper-inner">
 
@@ -115,7 +112,8 @@
                           
                           
                         </div>
-<!--                   
+                   
+<!--
                         <div id="aboutpopup" class="popup">
                           <div class="container-fluid">
                             <div class="content">
@@ -124,6 +122,7 @@
                           </div>
                         </div>
 -->
+
                      </div>
                     </div>
                   </div>
@@ -153,7 +152,7 @@
                             <a href="#close" id="myemail" class="contact_click" data-id="close">kishon.a.diaz@gmail.com</a>
                           </div>
                           <input id="clipboard" type="text" hidden="hidden">
-                         <!--<form >
+                         <form >
 
                             
                             <div class="input_cont">
@@ -208,21 +207,17 @@
     </div>
 
    
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    
+<!--    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>-->
 
       
       
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script type="text/javascript" src="javascprit/bootstrap.min.js"></script>
-<!--
-    <script type="text/javascript" src="javascprit/three.js-master/build/three.js"></script>
-    <script type="text/javascript" src="javascprit/background.js"></script>
--->
-    <script type="text/javascript" src="javascprit/mainjs.js"></script>
+    <script type="text/javascript" src="javascript/bootstrap.min.js"></script>
+    <script type="text/javascript" src="javascript/three.js-master/build/three.js"></script>
+    
+    <script type="text/javascript" src="javascript/mainjs.js"></script>
+    <script type="text/javascript" src="javascript/background.js"></script>
     
     
   </body>
