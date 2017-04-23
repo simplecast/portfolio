@@ -32,9 +32,12 @@
         <div class="cover-container ">
         <canvas id="backgroundCanvas">
         </canvas>
-
+          
           <div class="masthead clearfix">
+            <button id="colormenu">butt</button>
+<!--            <div class="popup"></div>-->
             <div class="inner">
+              
               <img class=" masthead-brand img-circle rimg" src="assets/images/kishon_image.png" alt="Picture of Kishon Diaz" width="369" height="415">
               <h3 class="masthead-brand">Kishon A. Diaz</h3>
               <nav>

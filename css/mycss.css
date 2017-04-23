@@ -1,6 +1,17 @@
 body{
   overflow: hidden;
 }
+#colormenu{
+  position: fixed;
+  left: 0;
+  margin-left: -10vmin;
+  margin-top: -10vmin;
+  width: 20vmin;
+  height: 20vmin;
+  border-radius: 200px;
+  max-height: 200px;
+  z-index: 5;
+}
 #backgroundCanvas{
   position: fixed;
   width: 100%;
@@ -43,8 +54,12 @@ body{
 /*  display: inline-flex;*/
   width: 100%;
   height: 100%;
+/*  max-height: 300px;*/
+  margin-top:150px;
   max-height: 43vh;
-  padding:50vmin 42vmin 50vmin 42vmin;
+  padding:46vmin 42vmin 50vmin 40vmin;
+  text-align: center;
+  border: 1px solid black;
 }
 .pages div{
 }
@@ -101,8 +116,8 @@ br{
   margin-top:-30vmin;
   margin-bottom:-20vmin;
   border-radius: 10px;
-  left 0;
-  right:10vmin;
+  left: 200px;
+/*  right:10vmin;*/
 }
 .span{
   position: absolute;
@@ -193,7 +208,7 @@ br{
 #aboutcont{
   position: fixed;
   width: 60%;
-  height: 90%;
+/*  height: 90%;*/
   margin: auto auto auto auto;
   left: 0;
   right: 0;
@@ -244,14 +259,15 @@ br{
   position: fixed;
   background: red;
   width: 100%;
-  height: 90%;
+  height: 100%;
   z-index: 2;
   left:0;
   right:0;
-  top: 18%;
+/*  top: 18%;*/
+  top: 0;
   bottom: 0;
   margin: auto auto auto auto;
-  min-height: 40%;
+/*  min-height: 40%;*/
 }
 a.learn{
 
@@ -260,11 +276,15 @@ a.learn{
 span.aboutadjust{
   margin-bottom: -400px;
 }
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {  
+/*  IE FIX HERE*/
+}
 @media (min-width:992px) and (max-width:1199px){
   #aboutcont{
     top:20vmin;
     
   }
+
   .cont{
     margin-left: -39vmin;
     right: 10vmin;
@@ -277,6 +297,11 @@ span.aboutadjust{
   }
   .cont{
     right: inherit;
+  }
+}
+@media (max-width: 900px){
+  .pages {
+  margin-top:inherit;
   }
 }
 @media (max-width: 767px){
@@ -321,9 +346,11 @@ span.aboutadjust{
     margin-top: 1vmin;
     top:65vmin;
   }
+/*
   .popup {
     margin-top: 40%;
   }
+*/
   .cont{
     right: inherit;
   }
@@ -346,7 +373,7 @@ span.aboutadjust{
     top:76vmin;
   }
 }
-@media (max-height:760){
+@media screen or (max-height:760){
   .pagecont{
     background: blue;
     min-height: 300px;
