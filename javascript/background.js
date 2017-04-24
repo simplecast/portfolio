@@ -2,7 +2,7 @@ var colorarry = [];
 var da = JSON.parse('[]');
 
 fillarry(colorarry,{"red":"black","blue":"blue","color3":"pink"});
-backgroundColors(colorarry);
+//backgroundColors(colorarry);
 //arrayinarray(colorarry,"blue");
 //arrayinarray(colorarry,"red");
 
