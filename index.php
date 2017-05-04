@@ -23,6 +23,7 @@
     <script type="text/javascript" src="javascript/three.js-master/build/three.js"></script>
     <script type="text/javascript" src="javascript/three.js-master/examples/js/Detector.js"></script>
     <script type="text/javascript" src="javascript/three.js-master/examples/js/renderers/CanvasRenderer.js"></script>
+    <script type="text/javascript" src="javascript/mylibs.js"></script>
   </head>
   <body>
    <div class="site-wrapper">
@@ -155,7 +156,7 @@
                             <a href="#close" id="myemail" class="contact_click" data-id="close">kishon.a.diaz@gmail.com</a>
                           </div>
                           <input id="clipboard" type="text" hidden="hidden">
-                         <form >
+                        <!-- <form >
 
                             
                             <div class="input_cont">
@@ -190,7 +191,7 @@
                               <span class="error_txt">Error</span>
                             </div><br>
                             
-                         </form>
+                         </form>-->
                        </div>
                       </div>
                     </div>

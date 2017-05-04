@@ -1,3 +1,8 @@
+firststarted = true;
+if(firststarted){
+  window.location.href = "#home";
+}
+
 var clicked;
 
 var ObjectIcons = function(){
