@@ -1,6 +1,7 @@
-firststarted = true;
-if(firststarted){
+
+if(!firststarted){
   window.location.href = "#home";
+  firststarted = true;
 }
 
 var clicked;

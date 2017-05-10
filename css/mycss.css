@@ -292,7 +292,7 @@ span.aboutadjust{
 }
 @media (min-width: 768px) and (max-width: 991px){
   body{
-    background: pink;
+/*    background: pink;*/
   }
   #aboutcont{
     
