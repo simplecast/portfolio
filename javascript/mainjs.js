@@ -1,8 +1,12 @@
 
+/*
 if(!firststarted){
   window.location.href = "#home";
   firststarted = true;
 }
+*/
+var logincoord = new loginseq();
+logincoord.getmousecoord(document);
 
 var clicked;
 

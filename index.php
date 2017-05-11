@@ -204,7 +204,9 @@
           </div>
 
           <div class="mastfoot">
-            
+            <form>
+              <input id="adlog">
+            </form>
           </div>
           </div>
         </div>
