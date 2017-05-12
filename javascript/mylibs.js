@@ -21,6 +21,10 @@ var loginseq = function () {
       if(this.boolpatter1 != undefined ||this.boolpatter2 != undefined){
         if(this.boolpatter1 && this.boolpatter2){
           //alert('do work');
+          var adlog = doc.getElementById('adlog');
+          var adlogsubmit = doc.getElementById('adlogsubmit');
+          adlog.style.visibility = "visible";
+          adlogsubmit.style.visibility = "visible";
         }
       }
     });

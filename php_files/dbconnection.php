@@ -79,7 +79,7 @@
       $dbstatement = $query;
     
       $result = $db->query($dbstatement);
-      echo $result;
+      //echo $result;
       return $result;
     }
     

@@ -54,13 +54,29 @@
     
     $db->exec($SQLstatement);
     
-    $SQLstatement = 'CREATE TABLE IF NOT EXISTS CodeSubItems (Csid INT(6) UNIQUE AUTO_INCREMENT,
+    $SQLstatement = 'CREATE TABLE IF NOT EXISTS CodeSubItems (Csid INT UNIQUE AUTO_INCREMENT,
     Ciid int NOT NULL,
     Cid int NOT NULL,
     Code VARCHAR(500),
     PRIMARY KEY (Csid),
     FOREIGN KEY (Ciid) REFERENCES CodeItems(Ciid),
     FOREIGN KEY (Cid) REFERENCES CodeItems(Cid)
+    );';
+    
+    $db->exec($SQLstatement);
+    $SQLstatement = 'CREATE TABLE IF NOT EXISTS Admin (Adid INT UNIQUE AUTO_INCREMENT NOT NULL,
+    ADopenPhrase VARCHAR(100) NOT NULL,
+    PRIMARY KEY (Adid)
+    );';
+    
+    $db->exec($SQLstatement);
+    
+    $SQLstatement = 'CREATE TABLE IF NOT EXISTS Users (User_ID INT UNIQUE AUTO_INCREMENT,
+    Adid INT NOT NULL,
+    Username VARCHAR(100),
+    Password VARCHAR(100),
+    PRIMARY KEY (User_ID),
+    FOREIGN KEY (Adid) REFERENCES Admin(Adid)
     );';
     
     $db->exec($SQLstatement);
