@@ -65,7 +65,7 @@
     
     $db->exec($SQLstatement);
     $SQLstatement = 'CREATE TABLE IF NOT EXISTS Admin (Adid INT UNIQUE AUTO_INCREMENT NOT NULL,
-    ADopenPhrase VARCHAR(100) NOT NULL,
+    Logged_on INT NOT NULL DEFAULT 0,
     PRIMARY KEY (Adid)
     );';
     
@@ -80,6 +80,8 @@
     );';
     
     $db->exec($SQLstatement);
+    
+    
     
   }catch(PDOException $e){
     echo "here";

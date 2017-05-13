@@ -26,10 +26,6 @@
     <script type="text/javascript" src="javascript/three.js-master/examples/js/renderers/CanvasRenderer.js"></script>
     <script type="text/javascript" src="javascript/mylibs.js"></script>
     <?php $processpage="./index.php"; include('./php_files/createdb.php')?>
-    <script type="text/javascript">
-      var adlog = "";
-    </script>
-    <?php include('./php_files/adlog.php')?>
   </head>
   <body>
    <div class="site-wrapper">
@@ -209,7 +205,7 @@
 
           <div class="mastfoot">
             <form action="<?php $processpage;?>" method="post" onsubmit="javascript: return false;" novalidate>
-              <input name="adlogin" id="adlog"> <input name="adlogsub" id="adlogsubmit" type="submit" value="OK">
+               <input name="adlogsub" id="adlogsubmit" type="submit" value="Log IN:"><span id="admode">OFF</span>
             </form>
           </div>
           </div>
@@ -232,6 +228,7 @@
     <script type="text/javascript" src="javascript/background.js"></script>
 <!--    <script type="text/javascript" src="javascript/adloglin.js"></script>-->
     <?php include('./php_files/adlonlin.php')?>
+
     
     
   </body>

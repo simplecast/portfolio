@@ -1,4 +1,5 @@
 var firststarted = false;
+var loggedon = false;
 var loginseq = function () {
   this.boolpatter1 = false;
   this.boolpatter2 = false;
@@ -21,9 +22,9 @@ var loginseq = function () {
       if(this.boolpatter1 != undefined ||this.boolpatter2 != undefined){
         if(this.boolpatter1 && this.boolpatter2){
           //alert('do work');
-          var adlog = doc.getElementById('adlog');
+          var admode = doc.getElementById('admode');
           var adlogsubmit = doc.getElementById('adlogsubmit');
-          adlog.style.visibility = "visible";
+          admode.style.visibility = "visible";
           adlogsubmit.style.visibility = "visible";
         }
       }

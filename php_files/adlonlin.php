@@ -1,12 +1,14 @@
 <script type="text/javascript">
-  <?php
+ 
+</script>
+<?php
+    echo $db->exec('SELECT `Adid`, `Logged_on` FROM `admin` WHERE 1');
+    
+    
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
       if(isset($_POST['adlogsub'])){
-        if(isset($_POST['adlogin'])== newo){
-          header('Location: ./admin/login.php');
-        }
+       
       }
     }
   
   ?>
-</script>

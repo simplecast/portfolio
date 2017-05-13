@@ -32,6 +32,10 @@ body{
   visibility: hidden;
   color: black;
 }
+#admode{
+  visibility: hidden;
+  color: red;
+}
 .masthead{
   z-index: 30;
   border-bottom: 1px solid white;
