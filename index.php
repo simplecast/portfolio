@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <?php include('./php_files/dbconnection.php')?>
+    <?php include('./php_files/adlonlin.php')?>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -227,7 +228,7 @@
     <script type="text/javascript" src="javascript/mainjs.js"></script>
     <script type="text/javascript" src="javascript/background.js"></script>
 <!--    <script type="text/javascript" src="javascript/adloglin.js"></script>-->
-    <?php include('./php_files/adlonlin.php')?>
+    
 
     
     

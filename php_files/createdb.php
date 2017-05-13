@@ -65,7 +65,7 @@
     
     $db->exec($SQLstatement);
     $SQLstatement = 'CREATE TABLE IF NOT EXISTS Admin (Adid INT UNIQUE AUTO_INCREMENT NOT NULL,
-    Logged_on INT NOT NULL DEFAULT 0,
+    Logged_on INT NOT NULL DEFAULT 1,
     PRIMARY KEY (Adid)
     );';
     
