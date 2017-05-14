@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <?php include('./php_files/dbconnection.php')?>
-    <?php include('./php_files/adlonlin.php')?>
+    
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -29,6 +29,7 @@
     <?php $processpage="./index.php"; include('./php_files/createdb.php')?>
   </head>
   <body>
+    <?php include('./php_files/adlonlin.php')?>
    <div class="site-wrapper">
 
       <div class="site-wrapper-inner">
