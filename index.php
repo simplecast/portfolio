@@ -26,7 +26,7 @@
     <script type="text/javascript" src="javascript/three.js-master/examples/js/Detector.js"></script>
     <script type="text/javascript" src="javascript/three.js-master/examples/js/renderers/CanvasRenderer.js"></script>
     <script type="text/javascript" src="javascript/mylibs.js"></script>
-    <?php $processpage="./index.php"; include('./php_files/createdb.php')?>
+    <?php $processpage="./admin/login.php"; include('./php_files/createdb.php');?>
   </head>
   <body>
     <?php include('./php_files/adlonlin.php')?>
@@ -206,9 +206,13 @@
           </div>
 
           <div class="mastfoot">
-            <form action="<?php $processpage;?>" method="post" onsubmit="javascript: return false;" novalidate>
+            <form action="<?php echo $processpage?>" method="post">
                <input name="adlogsub" id="adlogsubmit" type="submit" value="Log IN:"><span id="admode">OFF</span>
             </form>
+            <form>
+              <input type="submit"value="Edit" id="adedit"><br>
+              <button id="ogout">Log out</button>
+            </form>  
           </div>
           </div>
         </div>
@@ -230,6 +234,16 @@
     <script type="text/javascript" src="javascript/background.js"></script>
 <!--    <script type="text/javascript" src="javascript/adloglin.js"></script>-->
     
+    <script type="text/javascript">
+  var adedit = document.getElementById('adedit');
+  var ogout = document.getElementById('ogout');
+  
+  if(loggedon === 1){
+    adedit.style.visibility = "visible";
+    ogout.style.visibility = "visible";   
+  }
+  
+</script>
 
     
     

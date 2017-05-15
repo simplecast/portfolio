@@ -1,7 +1,7 @@
 <?php
  if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if(isset($_POST['adlogsub'])){
-
+      header("Loction: admin/login.php");
     }
   }
   $logg;
@@ -10,12 +10,14 @@
   };
   echo $logg;
   if($logg === "1"){
-    $logg = "here";
+    //$logg = "here";
   }else{
-    $logg = "there";
+    //$logg = "there";
   }
+  print(gettype($logg));
 ?>
 <script type="text/javascript">
-  adlog = "<?php echo $logg?>";
-  alert("<?php echo $logg?>");
+  loggedon = <?php echo $logg?>;
+  
+  
 </script>

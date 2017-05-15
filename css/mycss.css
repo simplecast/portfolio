@@ -36,6 +36,14 @@ body{
   visibility: hidden;
   color: red;
 }
+#ogout{
+  visibility: hidden;
+  color: black;
+}
+#adedit{
+  visibility: hidden;
+  color: black;
+}
 .masthead{
   z-index: 30;
   border-bottom: 1px solid white;

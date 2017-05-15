@@ -1,5 +1,5 @@
 var firststarted = false;
-var loggedon = false;
+var loggedon = 0;
 var loginseq = function () {
   this.boolpatter1 = false;
   this.boolpatter2 = false;

@@ -8,8 +8,9 @@
       <label for="username">Username</label>
       <input name="username" id="username" type="text">
       <br>
-      <label for="password">Username</label>
+      <label for="password">Password</label>
       <input name="password" id="password" type="password"><br>
+      <input value="Log In">
     </form>
   </body>
 </html>
