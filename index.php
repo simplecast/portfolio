@@ -27,9 +27,15 @@
     <script type="text/javascript" src="javascript/three.js-master/examples/js/renderers/CanvasRenderer.js"></script>
     <script type="text/javascript" src="javascript/mylibs.js"></script>
     <?php $processpage="./admin/login.php"; include('./php_files/createdb.php');?>
+    
   </head>
   <body>
-    <?php include('./php_files/adlonlin.php')?>
+    
+    <?php 
+    include('./php_files/adlonlin.php') ;?>
+    <?php 
+    
+    ?>
    <div class="site-wrapper">
 
       <div class="site-wrapper-inner">
@@ -245,6 +251,10 @@
   
 </script>
 
+    
+    <?php //CloseDB();
+      
+    ?>
     
     
   </body>

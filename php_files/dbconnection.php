@@ -79,10 +79,14 @@
       $dbstatement = $query;
     
       $result = $db->query($dbstatement);
-      //echo $result;
+      echo $result;
       return $result;
     }
-    
+    function CloseDB(){
+      global $db;
+      $db = NULL;
+      //var_dump($db);
+    }
     }catch (PDOExcetoption $e){
       echo $e->getMessage();
     }
