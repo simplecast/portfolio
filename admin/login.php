@@ -3,62 +3,48 @@
   <head>
     <title>Login</title>
     <?php
-      
+      $adusers="";
+      $adpass="";
       include('../php_files/dbconnection.php');
-    
-    
-    
-    
-//      $adusers = $db->Query("SELECT * FROM `users` WHERE users.User_ID=1,Adid=1");
-//      $adpass = $db->exec("SELECT `Password` FROM `users` WHERE 1");
+      foreach($db->query("SELECT * FROM `users` ") as $h){
+         $adusers = $h['Username'];
+         $adpass = $h['Password'];
+      }
       $logprocess = './login.php';
-      ///$isempty = [true,true,true,true];
-      //echo $adusers;
-     // print( $aduser);
+      $isempty = [true,true,true,true];
       function validation(){
         global $isempty;
-        //global $aduser;
-//        if ($_SERVER["REQUEST_METHOD"] == "POST") {
-//          if(isset($_POST['logsub'])){
-//            if(!empty($_POST['username'])){
-//              $isempty[0] = false;
-//              if($_POST['username'] === $aduser){
-//                $isempty[1] = false;
-//              }
-//            }
-//            if(!empty($_POST['password'])){
-//              $isempty[2] = false;
-//              if($_POST['password']){
-//                $isempty[3] = false;
-//              }
-//            }
-//            
-//            
-//            if($isempty[0] === false && $isempty[1] === false &&
-//               $isempty[2] === false && $isempty[3] ===false){
-//              return true;
-//            }
-//            
-//            return false;
-//          }
+        global $aduser;
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+          if(isset($_POST['logsub'])){
+            if(!empty($_POST['username'])){
+              $isempty[0] = false;
+            }else 
+              if($_POST['username'] === $aduser){
+              $isempty[1] = false;
+            }else
+            if(!empty($_POST['password'])){
+              $isempty[2] = false;
+            }else
+            if($_POST['password'] === $adpass){
+                $isempty[3] = false;
+            }
+            
+            
+            if($isempty[0] === false && $isempty[1] === false &&
+               $isempty[2] === false && $isempty[3] ===false){
+              return true;
+            }
+            
+            return false;
+          }
           
-       // }
+        }
       }
     ?>
     
   </head>
   <body>
-    <?php
-    foreach($db->query("SELECT * FROM `users` ") as $h){
-        echo $h['Password'];
-      }
-    try{
-      
-      
-    }catch (PDOExcetoption $e){
-      echo $e->getMessage();
-    }
-    ?>
     <form action="<?php echo $logprocess;?>" onsubmit="<?php validation(); ?>" method="post">
       <label for="username">Username</label>
       <input name="username" id="username" type="text">
