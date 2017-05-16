@@ -1,5 +1,5 @@
 <?php
-  $dns= 'mysql:host=localhost';
+  $dns= 'mysql:host=localhost;dbname=digisoul_portfolio';
   $root = 'digisoul_kishon';
   $pass = '$K7139Diaz';
   
@@ -85,8 +85,10 @@
     function CloseDB(){
       global $db;
       $db = NULL;
-      //var_dump($db);
+      
+      var_dump($db);
     }
+    
     }catch (PDOExcetoption $e){
       echo $e->getMessage();
     }

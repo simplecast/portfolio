@@ -6,6 +6,9 @@
       
       include('../php_files/dbconnection.php');
     
+    
+    
+    
 //      $adusers = $db->Query("SELECT * FROM `users` WHERE users.User_ID=1,Adid=1");
 //      $adpass = $db->exec("SELECT `Password` FROM `users` WHERE 1");
       $logprocess = './login.php';
@@ -45,8 +48,16 @@
     
   </head>
   <body>
-    <?php 
-    Query('SELECT `Username` FROM `users` WHERE 1');
+    <?php
+    foreach($db->query("SELECT * FROM `users` ") as $h){
+        echo $h['Password'];
+      }
+    try{
+      
+      
+    }catch (PDOExcetoption $e){
+      echo $e->getMessage();
+    }
     ?>
     <form action="<?php echo $logprocess;?>" onsubmit="<?php validation(); ?>" method="post">
       <label for="username">Username</label>

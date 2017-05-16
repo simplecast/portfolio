@@ -252,7 +252,7 @@
 </script>
 
     
-    <?php //CloseDB();
+    <?php CloseDB();
       
     ?>
     
