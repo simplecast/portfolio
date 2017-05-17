@@ -6,7 +6,7 @@
       $adusers="";
       $adpass="";
       include('../php_files/dbconnection.php');
-      foreach($db->query("SELECT * FROM `users` ") as $h){
+      foreach($db->query("SELECT * FROM `users` WHERE 1 ") as $h){
          $adusers = $h['Username'];
          $adpass = $h['Password'];
       }
@@ -33,7 +33,9 @@
             
             if($isempty[0] === false && $isempty[1] === false &&
                $isempty[2] === false && $isempty[3] ===false){
+             
               return true;
+              
             }
             
             return false;
