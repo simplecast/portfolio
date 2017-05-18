@@ -10,7 +10,7 @@
       $conpass = "";
       $porocess = "./changePass.php";
       $isempty = [true,true,true];
-      foreach($db->query('SELECT * FROM `users` WHERE 1') as $h){
+      foreach($db->query('SELECT `Password` FROM `users` WHERE User_ID =1 AND Adid = 1') as $h){
         echo $h['Password'];
       };
     function Validation(){
@@ -19,20 +19,23 @@
         global $conpass;
         global $porocess;
         global $isempty;
+        global $db;
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if(isset($_POST['nPsub'])){
-          if(!empty($_POST['newpass'])){
+          $newpass = $_POST['newpass'];
+          $conpass = $_POST['confirmpass'];
+          if(!empty($newpass)){
             echo "heerr";
             $isempty[0] = false;
           }
-          if(!empty($_POST['confirmpass'])){
+          if(!empty($conpass)){
             echo "there";
             $isempty[1] = false;
           }
-          if($_POST['newpass'] !== $_POST['confirmpass']){
+          if($newpass !== $conpass){
             echo "Not match";
           }else{
-            if(!empty($_POST['newpass']) && !empty($_POST['confirmpass'])){
+            if(!empty($newpass) && !empty($conpass)){
               $isempty[2] = false;
             }
           }
@@ -40,6 +43,8 @@
             echo "Not Yeah ";
           };
           if($isempty[0]=== false && $isempty[1]=== false && $isempty[2]=== false ){
+            $newpass = password_hash($newpass,PASSWORD_DEFAULT);
+            $db->exec('UPDATE `users` SET `Password`="'.$newpass.'" WHERE User_ID =1 AND Adid = 1');
             header("Location: ./adminpage.php");
             return true;
           }
@@ -53,7 +58,7 @@
     ?>
   </head>
   <body>
-    <?php echo Validation();?>
+<!--    <?php //echo Validation();?>-->
     <form action="<?php echo $porocess;?>" method="post" onsubmit="php: return <?php echo Validation(); ?>"
       <label>New Password</label>
       <input name="newpass" type="text">
