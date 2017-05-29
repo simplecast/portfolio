@@ -32,7 +32,7 @@
   <body>
     
     <?php 
-    include('./php_files/adlonlin.php') ;?>
+    //include('./php_files/adlonlin.php') ;?>
     <?php 
     
     ?>

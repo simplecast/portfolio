@@ -10,6 +10,7 @@
     
     $SQLstatement = 'CREATE TABLE IF NOT EXISTS Projects (Pid INT UNIQUE AUTO_INCREMENT,
     Name VARCHAR (100) NOT NULL, 
+    Isactived VARCHAR (8) NOT NULL DEFAULT "true", 
     PRIMARY KEY (Pid));';
     
     $db->exec($SQLstatement);
@@ -17,6 +18,7 @@
       $SQLstatement = 'CREATE TABLE IF NOT EXISTS Codes (Cid INT UNIQUE AUTO_INCREMENT,
       Name VARCHAR (100) NOT NULL,
       Img_Loc VARCHAR(100),
+      Isactived VARCHAR (8) NOT NULL, 
       PRIMARY KEY (Cid)
     );';
     
@@ -44,12 +46,10 @@
     
     $SQLstatement = 'CREATE TABLE IF NOT EXISTS ProjectSubItems (Prsid INT UNIQUE AUTO_INCREMENT,
       Prid int NOT NULL,
-      Pid int NOT NULL,
       Imgs_Loc VARCHAR(100),
       Project VARCHAR(500),
       PRIMARY KEY (Prsid),
-      FOREIGN KEY (Prid) REFERENCES ProjectItems(Prid),
-      FOREIGN KEY (Pid) REFERENCES ProjectItems(Pid)
+      FOREIGN KEY (Prid) REFERENCES ProjectItems(Prid)
     );';
     
     $db->exec($SQLstatement);

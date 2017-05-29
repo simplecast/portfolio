@@ -10,7 +10,7 @@
       $cprocess;
       $ciprocess;
       $csiprocess;
-      
+      $pid = array();
       $arry = [["Padd","Pup","Pdel",
                     "Piadd","Piup","Pidel",
                     "Psiadd","Psiup","Psidel",
@@ -18,7 +18,10 @@
                     "Ciadd","Ciup","Cidel",
                     "Csiadd","Csiup","Csidel"
                 ]];
-    
+      foreach($db->query("Select `Pid` FROM `projects` WHERE 1") as $h){
+          array_push($pid,$h["Pid"]); 
+      }
+      //echo $pid[1];
       function validate(){
         global $pprocess;
         global $piprocess;
@@ -44,146 +47,181 @@
     
     </script>
     <style>
+      body{
+        height: 100%;
+        
+      }
       table {
-          border-collapse: collapse;
+        border-collapse: collapse;
+/*        display: table;     */
       }
-
+      fieldset{
+          
+      }
+      form{
+       
+      }
       table, th, td {
-          border: 1px solid black;
+        border: 1px solid black;
+        
       }
+      tr{
+        display: table-row;
+      }
+/*
+      th{
+        display:table-row;
+        width: auto;
+      }
+      td{
+        display: table-row;
+      }
+*/
     </style>
     <script type="text/javascript" src="../javascript/jquery-3.1.1.min.js"></script>
     <script type="text/javascript" src="../javascript/jquery.redirect.js"></script>
   </head>
   <body>
-    <form action="<?php $pprocess?>" method="post" onsubmit="php:; ">
+    <form action="<?php $pprocess?>" method="post" onsubmit="javascript: return false; ">
       <fieldset>
         <legend>Projects</legend>
-        <input name="add" id="Padd" type="submit" value="Add">
-        <input name="update" id="Pup" type="submit" value="update">
-        <input name="delete" id="Pdel" type="submit" value="delete">
+        <input name="add" class="Padd" type="submit" value="Add">
 
         <table>
-          <th>ID</th>
-          <th>Name</th>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+          </tr>
           <?php
             foreach($db->query('SELECT * FROM `projects`') as $h){
-            echo"<td>".$h['Pid']."</td>";
+            echo"<tr><td>".$h['Pid']."</td>";
             echo"<td>".$h['Name']."</td>";
+            echo"<td>".$h['Isactived']."</td>
+              <td>
+                <input name=\"update\" class=\"Pup\" type=\"submit\" data-id=\"".$h['Pid']."\" value=\"update\">
+              </td>
+              <td>
+                <input name=\"add\" class=\"Piadd\" type=\"submit\" data-id=\"".$h['Pid']."\" value=\"Add To Project Item\">
+              </td>
+            </tr>";
           };
 
           ?>
         </table>
       </fieldset>
     </form>
-    <form action="<?php $piprocess?>" method="post" >
+    <form action="<?php $piprocess?>" method="post" onsubmit="javascript: return false;">
       <fieldset>
         <legend>Project Item</legend>
-        <input name="add" id="Piadd" type="submit" value="Add">
-        <input name="update" id="Piup" type="submit" value="update">
-        <input name="delete" id="Pidel" type="submit" value="delete">
-
+<!--        <input name="add" class="Piadd" type="submit" value="Add">-->
         <table>
-          <th>Procject Item Id</th>
-          <th>Procject Id</th>
-          <th>Project Name</th>
-          <th>Project Description</th>
+          <tr>
+            <th>Procject Item Id</th>
+            <th>Procject Id</th>
+            <th>Project Name</th>
+            <th>Project Description</th>
+          </tr>
           <?php
             foreach($db->query('SELECT * FROM `projectitems`') as $h){
-            echo"<td>".$h['Prid']."</td>";
+            echo"<tr><td>".$h['Prid']."</td>";
             echo"<td>".$h['Pid']."</td>";
             echo"<td>".$h['PrName']."</td>";
-            echo"<td>".$h['Prdesc']."</td>";
+            echo"<td>".$h['Prdesc']."</td>
+            <td><input name=\"update\" class=\"Piup\" type=\"submit\" data-id=\"".$h['Prid']."\" data-id2=\"".$h['Pid']."\" value=\"update\"></td>
+            <td><input name=\"add\" class=\"Psiadd\" type=\"submit\" data-id=\"".$h['Prid']."\" data-id2=\"".$h['Pid']."\"  value=\"Add To Project Subitems\"></td>
+            </tr>";
           };?>
         </table>
       </fieldset>
     </form>
-    <form action="<?php $psiprocess?>" method="post" >
+    <form action="<?php $psiprocess?>" method="post" onsubmit="javascript: return false;">
       <fieldset>
         <legend>Project subitems</legend>
-        <input name="add" id="Psiadd" type="submit" value="Add">
-        <input name="update" id="Psiup" type="submit" value="update">
-        <input name="delete" id="Psidel" type="submit" value="delete">
-
+        
         <table>
-          <th>Procject subitems Id</th>
-          <th>Procject item Id</th>
-          <th>Procject Id</th>
-          <th>Images Location</th>
-          <th>Items</th>
+          <tr>
+            <th>Procject subitems Id</th>
+            <th>Procject item Id</th>
+            <th>Procject Id</th>
+            <th>Images Location</th>
+            <th>Items</th>
+          </tr>
           <?php
               foreach($db->query('SELECT * FROM `projectsubitems`') as $h){
-              echo"<td>".$h['Prsid']."</td>";
+              echo"<tr><td>".$h['Prsid']."</td>";
               echo"<td>".$h['Prid']."</td>";
               echo"<td>".$h['Pid']."</td>";
               echo"<td>".$h['Imgs_Loc']."</td>";
-              echo"<td>".$h['Project']."</td>";
+              echo"<td>".$h['Project']."</td>
+              <td><input name=\"update\" class=\"Psiup\" type=\"submit\" value=\"update\"></td></tr>";
             };?>
         </table>
       </fieldset>
     </form>
     
-    <form action="<?php $cprocess?>" method="post">
+    <form action="<?php $cprocess?>" method="post" onsubmit="javascript: return false;">
       <fieldset>
         <legend></legend>Codes table
-        <input name="add" id="Cadd" type="submit" value="Add">
-        <input name="update" id="Cup" type="submit" value="update">
-        <input name="delete" id="Cdel" type="submit" value="delete">
+        <input name="add" class="Cadd" type="submit" value="Add">
 
         <table>
-          <th>CID</th>
-          <th>Name</th>
-          <th>Image Location</th>
+          <tr>
+            <th>CID</th>
+            <th>Name</th>
+            <th>Image Location</th>
+          </tr>
           <?php
               foreach($db->query('SELECT * FROM `codes`') as $h){
-              echo"<td>".$h['Cid']."</td>";
+              echo"<tr><td>".$h['Cid']."</td>";
               echo"<td>".$h['Name']."</td>";
-              echo"<td>".$h['Img_Loc']."</td>";
+              echo"<td>".$h['Img_Loc']."</td>
+              <td><input name=\"update\" class=\"Cup\" type=\"submit\" value=\"update\"></td></tr>";
             };?>
         </table>
       </fieldset>
     </form>
     
-    <form action="<?php $ciprocess?>" method="post">
+    <form action="<?php $ciprocess?>" method="post" onsubmit="javascript: return false;">
       <fieldset>
         Codes items table
-        <input name="add" id="Ciadd" type="submit" value="Add">
-        <input name="update" id="Ciup" type="submit" value="update">
-        <input name="delete" id="Cidel" type="submit" value="delete">
-
+        <input name="add" class="Ciadd" type="submit" value="Add">
         <table>
-          <th>CIID</th>
-          <th>CID</th>
-          <th>Name</th>
-          <th>Code Desc</th>
+          <tr>
+            <th>CIID</th>
+            <th>CID</th>
+            <th>Name</th>
+            <th>Code Desc</th>
+          </tr>
           <?php
               foreach($db->query('SELECT * FROM `codeitems`') as $h){
-              echo"<td>".$h['Ciid']."</td>";
+              echo"<tr><td>".$h['Ciid']."</td>";
               echo"<td>".$h['Cid']."</td>";
               echo"<td>".$h['CName']."</td>";
-              echo"<td>".$h['Cdesc']."</td>";
+              echo"<td>".$h['Cdesc']."</td>
+              <td><input name=\"update\" class=\"Ciup\" type=\"submit\" value=\"update\"></td></tr>";
             };?>
         </table>
       </fieldset>
     </form>
-    <form action="<?php $csiprocess?>" method="post">
+    <form action="<?php $csiprocess?>" method="post" onsubmit="javascript: return false;">
       <fieldset>
         Codes subitems table
-        <input name="add" id="Csiadd" type="submit" value="Add">
-        <input name="update" id="Csiup"  type="submit" value="update">
-        <input name="delete" id="Csidel" type="submit" value="delete">
+        <input name="add" class="Csiadd" type="submit" value="Add">
 
         <table>
-          <th>CSIID</th>
-          <th>CIID</th>
-          <th>CID</th>
-          <th>Code</th>
+          <tr>
+            <th>CSIID</th>
+            <th>CIID</th>
+            <th>CID</th>
+            <th>Code</th>
+          </tr>
           <?php
               foreach($db->query('SELECT * FROM `codesubitems`') as $h){
+              echo"<tr><td>".$h['Cid']."</td>";
               echo"<td>".$h['Cid']."</td>";
               echo"<td>".$h['Cid']."</td>";
-              echo"<td>".$h['Cid']."</td>";
-              echo"<td>".$h['Code']."</td>";
+              echo"<td>".$h['Code']."</td>
+              <td><input name=\"update\" class=\"Csiup\"  type=\"submit\" value=\"update\"></td></tr>";
             };?>
         </table>
       </fieldset>
@@ -192,58 +230,69 @@
     <script type="text/javascript">
       
       for(var i in idarry){
-        console.log(idarry[i]);
-        getfindbyid(idarry[i]).addEventListener('click',function(e){
+       // console.log(idarry[i]);
+       
+        for(var j=0 ; j <= getfindByClass(idarry[i]).length; j++){
+            
+            if(getfindByClass(idarry[i])[j] != undefined){
+              
+              getfindByClass(idarry[i])[j].addEventListener('click',function(e){
           
-          switch(e.target.id){
+          switch(e.target.className){
           
             case("Padd") :{
-              $.redirect('./dynamicresults.php',{who:""+e.target.id+""},"POST","_self");
-              alert(e.target.id);
+              $.redirect('./dynamicresults.php',{who:""+e.target.className+""},"POST","_self");
               break;
             }case("Pup") :{
-              break;
-            }case("Pdel") :{
+              $.redirect('./dynamicresults.php',
+                         {who:""+e.target.className+"", ids:""+e.target.getAttribute('data-id')+""},
+                         "POST","_self");
               break;
             }case("Piadd") :{
+              $.redirect('./dynamicresults.php',
+                         {who:""+e.target.className+"", ids:""+e.target.getAttribute('data-id')+""},
+                         "POST","_self");
               break;
             }case("Piup") :{
-              break;
-            }case("Pidel") :{
+              $.redirect('./dynamicresults.php',
+                         {who:""+e.target.className+"", ids:""+e.target.getAttribute('data-id')+"", ids2:""+e.target.getAttribute('data-id2')+""},
+                         "POST","_self");
               break;
             }case("Psiadd") :{
+              $.redirect('./dynamicresults.php',
+                         {who:""+e.target.className+"", ids:""+e.target.getAttribute('data-id')+"", ids2:""+e.target.getAttribute('data-id2')+""},
+                         "POST","_self");
               break;
             }case("Psiup") :{
-              break;
-            }case("Psidel") :{
               break;
             }case("Cadd") :{
               break;
             }case("Cup") :{
               break;
-            }case("Cdel") :{
-              break;
             }case("Ciadd") :{
               break;
             }case("Ciup") :{
-              break;
-            }case("Cidel") :{
               break;
             }case("Csiadd") :{
               break;
             }case("Csiup") :{
               break;
-            }case("Csidel") :{
-              break;
             }
           }
+            
         });
+          }
+        }
       }
 
       
       
       function getfindbyid(id){
         var doc = document.getElementById(id);
+        return doc;
+      }
+      function getfindByClass(clas){
+        var doc = document.getElementsByClassName(clas);
         return doc;
       }
       function addidtoarray(obj){

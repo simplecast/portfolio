@@ -4,7 +4,7 @@
       header("Loction: admin/login.php");
     }
   }
-  $logg;
+  $logg = "";
   foreach($db->query('SELECT `Logged_on` FROM `admin` WHERE 1') as $h){
     $logg = $h['Logged_on'];
   };

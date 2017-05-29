@@ -10,9 +10,9 @@
       $conpass = "";
       $porocess = "./changePass.php";
       $isempty = [true,true,true];
-      foreach($db->query('SELECT `Password` FROM `users` WHERE User_ID =1 AND Adid = 1') as $h){
-        echo $h['Password'];
-      };
+//      foreach($db->query('SELECT `Password` FROM `users` WHERE User_ID =1 AND Adid = 1') as $h){
+//        echo $h['Password'];
+//      };
     function Validation(){
         global $passw;
         global $newpass;
@@ -61,9 +61,9 @@
 <!--    <?php //echo Validation();?>-->
     <form action="<?php echo $porocess;?>" method="post" onsubmit="php: return <?php echo Validation(); ?>"
       <label>New Password</label>
-      <input name="newpass" type="text">
+      <input name="newpass" type="password">
       <label>Confirm Password</label>
-      <input name="confirmpass" type="text">
+      <input name="confirmpass" type="password">
       <input name="nPsub" type="submit" value="Submit">
       <input type="reset" value="Reset">
     

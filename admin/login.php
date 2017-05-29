@@ -71,7 +71,7 @@
             $passw = "";
             $_POST['username'] = "";
             $_POST['password'] = "";
-            echo false;
+            return false;
           }
           
         }
