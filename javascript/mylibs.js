@@ -33,7 +33,8 @@ var loginseq = function () {
   }
   
 };
-var ObjectIcons = function(){
+var ObjectIcons = function(parent){
+  this.partentEle = document.body.querySelectorAll(parent);
   this.createElem = function(arg){
     return document.createElement(arg);
   }
@@ -44,6 +45,8 @@ var ObjectIcons = function(){
   this.trs = new Array();
   this.tds = new Array();
   
+  this.newR = 0;
+  
 //  this.atag.appendChild(this.img);
 //  this.td.appendChild(this.atag);
 //  this.tds.push(this.td);
@@ -53,10 +56,12 @@ var ObjectIcons = function(){
     this.tr.setAttribute('class',"iconRows");
     this.tr.style.cssText = "height:20vmin; padding:10px;";
     this.trs.push(this.tr);
+    this.newR++;
   }
   this.createnewObj = function(type,jlist){
     
     this.td = this.createElem('td');
+    this.td.setAttribute('class','tdsa');
     this.atag = this.createElem('a');
     switch(type){
         case "text":{
@@ -73,6 +78,19 @@ var ObjectIcons = function(){
         }case "button":{
          
           this.atag = this.createElem('button');
+          this.atag.setAttribute('class','btnclass');
+          if(jlist.text != null)
+            this.atag.textContent =  jlist.text;
+          else
+            this.atag.textContent =  "T";
+
+          this.atag.style.cssText = "font-size:5vmin;";
+
+          
+          break;
+        }case "input":{
+         
+          this.atag = this.createElem('input');
           this.atag.setAttribute('class','btnclass');
           if(jlist.text != null)
             this.atag.textContent =  jlist.text;
@@ -105,22 +123,36 @@ var ObjectIcons = function(){
     
     }
     
+    
     if(this.ob != null || this.ob != undefined){
       //console.log(this.ob);
       this.atag.appendChild(this.ob);
     }
+//    if(this.td.getClientRects()[0].right ===)
     this.td.appendChild(this.atag);
     return this.td;
   }
   
   
   this.addcount = 0;
+ 
   this.addtd =function(type,olist){
     this.tds[this.addcount] = this.createnewObj(type,olist);
+    
     for(var i=0; i < this.trs.length; i++){
       if(this.trs[i] != undefined){
-          if(olist.index != null)
+        if(this.trs[0].children[i] != undefined)
+          
+          if(this.trs[i].getBoundingClientRect().right === this.partentEle[0].getBoundingClientRect().right){
+            console.log("hrre"+i);
+          };
+          if(olist.index != null || olist.index != undefined){
+            if(this.trs[olist.index] == undefined){
+              this.newRow();
+            }
             this.trs[olist.index].appendChild(this.tds[this.addcount]);
+            
+          }
       }
     }
    
@@ -130,8 +162,11 @@ var ObjectIcons = function(){
     this.addcount++;
   }
   
-  
+  this.getRects = function(index){
+    return this.tds[index].getBoundingClientRect();
+  }
   this.appendItem =  function(){
+    
     return this.trs;
   }
 }

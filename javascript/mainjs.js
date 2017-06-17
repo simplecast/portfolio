@@ -7,17 +7,19 @@ var logincoord = new loginseq();
 logincoord.getmousecoord(document);
 
 var clicked;
+window.scrollTo(0,document.body.scrollHeight);
 
 
 
-var objs = new ObjectIcons();
-var cobjs = new ObjectIcons();
+var objs = new ObjectIcons('.iconss');
+var cobjs = new ObjectIcons('.iconscode');
 objs.newRow();
 objs.addtd('button',{text:"Art",index:0});
 objs.addtd('button',{text:"Arduino",index:0});
-objs.newRow();
-objs.addtd('button',{text:"Raspberry Pi",index:1});
-objs.addtd('button',{text:"LattePanda",index:1});
+
+
+objs.addtd('button',{text:"Raspberry Pi",index:0});
+objs.addtd('button',{text:"LattePanda",index:0});
 
 cobjs.newRow();
 cobjs.addtd('button',{text:"Android",index:0});
@@ -25,11 +27,12 @@ cobjs.addtd('button',{text:"C++",index:0});
 cobjs.addtd('button',{text:"C#",index:0});
 cobjs.addtd('button',{text:"java",index:0});
 
-cobjs.newRow();
-cobjs.addtd('button',{text:"Html",index:1});
-cobjs.addtd('button',{text:"Javascript",index:1});
-cobjs.addtd('button',{text:"PHP",index:1});
-cobjs.addtd('button',{text:"Python",index:1});
+
+cobjs.addtd('button',{text:"Html",index:0});
+cobjs.addtd('button',{text:"Javascript",index:0});
+cobjs.addtd('button',{text:"PHP",index:0});
+cobjs.addtd('button',{text:"Python",index:0});
+
 
 $('.iconss').append(objs.appendItem());
 $('.iconscode').append(cobjs.appendItem());
@@ -106,7 +109,9 @@ $("#myemail").on("touchstart click ",function(){
   document.location = "./pages/display.php";
 });*/
 
-$(".btnclass").attr('onclick','<?php echo "here" ?>')
+$(".btnclass").on('click',function(e){
+  console.log(e.target.innerHTML);
+});
 var d = {"g":9,"y":[]};
 function displaynow(clas,a){
   $(clas).removeAttr('class',"clo");
@@ -148,5 +153,11 @@ function resetclasses(){
   $(".message_area").addClass('message_area clo');
   $("#contactinf").addClass('linkcount span');
 } 
-
+if(window.location.href.includes("projectsw")){
+  $('#projectsw').trigger('click');
+}else if(window.location.href.includes("codes")){
+  $('#Codes').trigger('click');
+}else if(window.location.href.includes("about")){
+  $('#About').trigger('click');
+}
 

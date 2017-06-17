@@ -6,7 +6,7 @@
     $SQLstatement = 'Use digisoul_portfolio;';
     $db->exec($SQLstatement);
     
-    echo "Using Database digisoul_portfolio;";
+    
     
     $SQLstatement = 'CREATE TABLE IF NOT EXISTS Projects (Pid INT UNIQUE AUTO_INCREMENT,
     Name VARCHAR (100) NOT NULL, 
@@ -87,6 +87,6 @@
     
     
   }catch(PDOException $e){
-    echo "here";
+    //echo "here";
   }
 ?>

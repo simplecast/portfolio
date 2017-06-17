@@ -55,28 +55,34 @@
               <nav>
                 <ul class="nav masthead-nav">
                   <li class="navtop active" data-id="home">
-                    <a class="navtags" href="#home" data-id="home">Home</a>
+                    <a class="navtags" id="Home" href="#home" data-id="home">Home</a>
                   </li>
                   <li class="navtop" data-id="projects" >
-                      <a class="navtags" id="projects" href="#projects" data-id="projects">Projects</a>
+                      <a class="navtags" id="Projects" href="#projects" data-id="projects">Projects</a>
                   </li>
                   <li class="navtop" data-id="code" >
-                      <a class="navtags" href="#codes" data-id="codes">Codes</a>
+                      <a class="navtags" id="Codes" href="#codes" data-id="codes">Codes</a>
                   </li>
                   <li class="navtop" data-id="about" >
-                      <a class="navtags" href="#about" data-id="about">About Me</a>
+                      <a class="navtags" id="About" href="#about" data-id="about">About Me</a>
                   </li>
                   <li class="navtop" data-id="contact" >
-                    <a class="navtags" href="#contact" data-id="contacts">Contact</a>
+                    <a class="navtags" id="Contact" href="#contact" data-id="contacts">Contact</a>
                   </li>
               </ul>
             </nav>
             </div>
           </div>
           <div class="inner cover">
+<!--
             <div class="book">
               <div class="opened">
-                <div class="pages">
+
+              </div>
+            
+          </div>
+-->
+                            <div class="pages">
                   
                   <div id="home" >
                     <div id="homecont" class="cont">
@@ -89,7 +95,7 @@
                     </div>
                   </div>
                   <div id="project" >
-                    <div id="projectcont" class="cont clo">
+                    <div id="projectcont" class="clo">
                       <div class="pagecont"> 
                        <table class="iconss"> 
                        </table>
@@ -97,7 +103,7 @@
                     </div>
                   </div>
                   <div id="code">
-                    <div id="codecont" class="cont clo">
+                    <div id="codecont" class="clo">
                       <div class="pagecont"> 
                        <table class="iconscode">
                        </table>
@@ -105,9 +111,9 @@
                     </div>
                   </div>
                   <div id="about" >
-                    <div id="aboutcont" class="cont clo">
+                    <div id="aboutcont" class="clo">
                       <div class="pagecont">
-                        <div class="span aboutadjust">
+                        <div class="span">
                           I am passionate about programming and expanding my knowledge in the field of technology. I have strong work ethics, dependable and professional.  Once I am given the opportunity to be a programmer for your company it will open the door to develop new technologies and innovative ideas.
                           <br><br>
                           
@@ -142,7 +148,7 @@
                     </div>
                   </div>
                   <div id="contact" class="">
-                    <div id="contactcont" class="cont clo">
+                    <div id="contactcont" class="clo">
                       <div class="pagecont contpage "> 
                        <div id="contactinf" class="linkcont span">
                          If you would like to contact me for job opportunities, or for my freelance coding assistance with your projects my up works profile is <br>
@@ -322,10 +328,6 @@
                     </div>
                   </div>-->
                 </div>
-              </div>
-            
-          </div>
-
           <div class="mastfoot">
             <form action="<?php echo $processpage?>" method="post">
                <input name="adlogsub" id="adlogsubmit" type="submit" value="Log IN:"><span id="admode">OFF</span>

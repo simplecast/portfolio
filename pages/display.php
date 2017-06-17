@@ -24,6 +24,7 @@
     <script type="text/javascript" src="../javascprit/three.js-master/build/three.js"></script>
     <script type="text/javascript" src="../javascprit/three.js-master/examples/js/Detector.js"></script>
     <script type="text/javascript" src="../javascprit/three.js-master/examples/js/renderers/CanvasRenderer.js"></script>
+    
   </head>
   <body>
     <div class="site-wrapper">
@@ -44,7 +45,7 @@
                     <a class="navtags" href="../index.php#home" id="home" data-id="home">Home</a>
                   </li>
                   <li class="navtop" data-id="projects" >
-                      <a class="navtags" href="../index.php#project" data-id="projects">Projects</a>
+                      <a class="navtags" href="../#projectsw" data-id="projects">Projects</a>
                   </li>
                   <li class="navtop" data-id="code" >
                       <a class="navtags" href="../#codes" id="code" data-id="codes">Codes</a>
@@ -104,6 +105,8 @@
 -->
     <script type="text/javascript" src="../javascprit/mainjs.js"></script>
     
-    
+    <script type="text/javascript">
+      window.scrollTo(0,document.body.scrollHeight);
+    </script>
   </body>
 </html>
