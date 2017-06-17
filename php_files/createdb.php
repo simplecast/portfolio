@@ -15,17 +15,10 @@
     
     $db->exec($SQLstatement);
     
-      $SQLstatement = 'CREATE TABLE IF NOT EXISTS Codes (Cid INT UNIQUE AUTO_INCREMENT,
-      Name VARCHAR (100) NOT NULL,
-      Img_Loc VARCHAR(100),
-      Isactived VARCHAR (8) NOT NULL, 
-      PRIMARY KEY (Cid)
-    );';
     
-    $db->exec($SQLstatement);
-    
-    $SQLstatement = 'CREATE TABLE IF NOT EXISTS ProjectItems (Prid INT UNIQUE AUTO_INCREMENT NOT NULL,
+    $SQLstatement = 'CREATE TABLE IF NOT EXISTS ProjectItems (
       Pid INT NOT NULL,
+      Prid INT UNIQUE AUTO_INCREMENT NOT NULL,
       PrName VARCHAR (100) NOT NULL,
       Prdesc VARCHAR(200),
       PRIMARY KEY (Prid),
@@ -34,18 +27,9 @@
     
     $db->exec($SQLstatement);
     
-    $SQLstatement = 'CREATE TABLE IF NOT EXISTS CodeItems (Ciid INT UNIQUE AUTO_INCREMENT,
-      Cid INT NOT NULL,
-      CName VARCHAR (100) NOT NULL,
-      Cdesc VARCHAR(200),
-      PRIMARY KEY (Ciid),
-      FOREIGN KEY (Cid) REFERENCES Codes(Cid)
-    );';
-    
-    $db->exec($SQLstatement);
-    
-    $SQLstatement = 'CREATE TABLE IF NOT EXISTS ProjectSubItems (Prsid INT UNIQUE AUTO_INCREMENT,
+    $SQLstatement = 'CREATE TABLE IF NOT EXISTS ProjectSubItems (
       Prid int NOT NULL,
+      Prsid INT UNIQUE AUTO_INCREMENT,
       Imgs_Loc VARCHAR(100),
       Project VARCHAR(500),
       PRIMARY KEY (Prsid),
@@ -54,13 +38,32 @@
     
     $db->exec($SQLstatement);
     
-    $SQLstatement = 'CREATE TABLE IF NOT EXISTS CodeSubItems (Csid INT UNIQUE AUTO_INCREMENT,
+    $SQLstatement = 'CREATE TABLE IF NOT EXISTS Codes (Cid INT UNIQUE AUTO_INCREMENT,
+      Name VARCHAR (100) NOT NULL,
+      Img_Loc VARCHAR(100),
+      Isactived VARCHAR (8) NOT NULL, 
+      PRIMARY KEY (Cid)
+    );';
+    
+    $db->exec($SQLstatement);
+    
+    $SQLstatement = 'CREATE TABLE IF NOT EXISTS CodeItems (
+      Cid INT NOT NULL,
+      Ciid INT UNIQUE AUTO_INCREMENT,
+      CName VARCHAR (100) NOT NULL,
+      Cdesc VARCHAR(200),
+      PRIMARY KEY (Ciid),
+      FOREIGN KEY (Cid) REFERENCES Codes(Cid)
+    );';
+    
+    $db->exec($SQLstatement);
+    
+    $SQLstatement = 'CREATE TABLE IF NOT EXISTS CodeSubItems (
     Ciid int NOT NULL,
-    Cid int NOT NULL,
+    Csid INT UNIQUE AUTO_INCREMENT,
     Code VARCHAR(500),
     PRIMARY KEY (Csid),
-    FOREIGN KEY (Ciid) REFERENCES CodeItems(Ciid),
-    FOREIGN KEY (Cid) REFERENCES CodeItems(Cid)
+    FOREIGN KEY (Ciid) REFERENCES CodeItems(Ciid)
     );';
     
     $db->exec($SQLstatement);

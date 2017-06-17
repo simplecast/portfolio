@@ -4,7 +4,9 @@
     
     <?php
       $nname = " ";
+      $imgname = " ";
       $descript = " ";
+      $projdescript = " ";
       $placeholder = "";
       $placeholderdes = "";
       $isactive = "\"a\"";
@@ -128,12 +130,18 @@
               $currentcount = $h['Prsid'];
              // echo $h['Name'];
             };
-            $int = (int)$currentcount;
+            $int = (int)$session2value;
             $currentcount = $int;
             if($currentcount === 0)
               $currentcount = 1;
-            else
+            else{
+              if($session2value > $session2value+1){
+                echo "here";
+              }
               $currentcount++;
+            }
+          
+            
             $currentcount2id = $session2value;
             $int = (int)$currentcount2id;
             $currentcount2id =  $int;
@@ -143,12 +151,13 @@
             $int = (int)$session2value;
             $currentcount = $int;
             
+            echo $currentcount;
             $currentcount2id = $session3value;
             $int = (int)$currentcount2id;
             $currentcount2id =  $int;
             
             
-            foreach($db->query('SELECT * FROM `projectitems` WHERE `Psrid` ='."$currentcount".' AND `Prid` ='.$currentcount2id.'') as $h){
+            foreach($db->query('SELECT * FROM `projectsubitems` WHERE `Psrid` ='."$currentcount".' AND `Prid` ='.$currentcount2id.'') as $h){
               $placeholder = $h['PrName'];
               $placeholderdes = $h['Prdesc'];
               echo $placeholder;
@@ -196,10 +205,10 @@
         global $descript;
         global $currentcount2id;
         $f = '<form action="'."$process".'" method="post">
-                <label for="ID">ID</label>
-                <input id="ID" type="text" value='."$currentcount".' readonly><br>
                 <label for="ID2">Project ID</label>
                 <input id="ID2" type="text" value='."$currentcount2id".' readonly><br>
+                <label for="ID">Project Item ID</label>
+                <input id="ID" type="text" value='."$currentcount".' readonly><br>
                 <label for="nbame">Name</label>
                 <input name="nname" id="nbame" type="text" value="'."$nname".'"><br>
                 <label for="des">Description</label><br>
@@ -219,10 +228,10 @@
         global $placeholderdes;
         global $currentcount2id;
         $f = '<form action="'."$process".'" method="post">
-                <label for="ID">ID</label>
-                <input id="ID" type="text" value='."$currentcount".' readonly><br>
                 <label for="ID2">Project ID</label>
                 <input id="ID2" type="text" value='."$currentcount2id".' readonly><br>
+                <label for="ID">Project Item ID</label>
+                <input id="ID" type="text" value='."$currentcount".' readonly><br>
                 <label for="nbame">Name</label>
                 <input name="nname" id="nbame" type="text" placeholder="'.$placeholder.'"><br>
                 <label for="des">Description</label><br>
@@ -237,23 +246,25 @@
         global $currentcount;
         global $process;
         global $nname;
+        global $imgname;
         global $placeholder;
         global $descript;
+        global $projdescript;
         global $placeholderdes;
         global $currentcount2id;
         $f = '<form enctype="multipart/form-data" action="'."$process".'" method="post">
-                <label for="ID">ID</label>
-                <input id="ID" type="text" value='."$currentcount".' readonly><br>
                 <label for="ID2">Project ID</label>
                 <input id="ID2" type="text" value='."$currentcount2id".' readonly><br>
+                <label for="ID">Project Subitem ID</label>
+                <input id="ID" type="text" value='."$currentcount".' readonly><br>
                 <label for="nbame">Image Location</label>
-                <input name="nname" id="nname" type="txt" value="'."$nname".'"><br>
+                <input name="nname" id="nbame" type="text" value="'."$nname".'"><br>
                 <label for="nbame">Image Location</label>
-                <input name="imgfile" id="imgfile" type="file" ><br>
+                <input name="imgfile" id="imgfile" type="file" value="'."$imgname".'" ><br>
                 <label for="des">Projedct content</label><br>
-                <textarea name="desc" id="des" type="text" value="'."$descript".'"></textarea><br>
-                <label for="des">Projedct content</label><br>
-                <textarea name="desc" id="des" type="file" value="'."$descript".'"></textarea><br>
+                <input name="desc" id="des" type="text" value="'."$descript".'"><br>
+                <label for="descfile">Projedct content</label><br>
+                <input name="descfile" id="descfile" type="file" value="'."$projdescript".'"><br>
                 <input type="submit" name="psiadd" id="Add" value="add">
                 <input type="submit" name="done" id="Done" value="Done">
                 <input id="isact" type="checkbox" name="isact"  hidden><br>
@@ -376,22 +387,86 @@
             $fieldnotempty2 = true;
             
           }
-          if($fieldnotempty2===true && $fieldnotempty===true){
-//            $db->exec('INSERT INTO `projectitems`( `Pid`,`PrName`, `Prdesc`) VALUES ("'.$currentcount2id.'","'.$_POST["nname"].'","'.$_POST["desc"].'")');
+          
+            $nname = uploadImg();
+            $descript = uploadFile();
             
+          if($fieldnotempty || $fieldnotempty2 ){
+            $db->exec('INSERT INTO `projectsubitems`(`Prid`,`Imgs_Loc`,`Project`) VALUES ("'.$currentcount2id.'","'.$nname.'","'.$descript.'")');
           }
-          $target_dir = "../assets/images/";
+          
+        // $_POST["nname"] = "";
+          $imgname = "";
+          //$nname = "";
+          $projdescript = "";
+         // $descript = "";
+//          $_POST["imgfile"] = "";
+//          $_POST["descfile"] = "";
+        }
+        
+      } 
+    function uploadImg(){
+      $target_dir = "../assets/images/";
           $target_file = $target_dir . basename($_FILES["imgfile"]["name"]);
           $uploadOk = 1;
           $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
           // Check if image file is a actual image or fake image
+          if(!empty(getimagesize($_FILES["imgfile"]["tmp_name"]))){
+            $check = getimagesize($_FILES["imgfile"]["tmp_name"]);
+            if($check !== false) {
+                echo "File is an image - " . $check["mime"] . ".";
+                $uploadOk = 1;
+            } else {
+                echo "File is not an image.";
+                $uploadOk = 0;
+            }
+
+            // Check if file already exists
+            if (file_exists($target_file)) {
+                echo "Sorry, file already exists.";
+                $uploadOk = 0;
+            }
+            // Check file size
+            if ($_FILES["imgfile"]["size"] > 500000) {
+                echo "Sorry, your file is too large.";
+                $uploadOk = 0;
+            }
+            // Allow certain file formats
+            if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
+            && $imageFileType != "gif" ) {
+                echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+                $uploadOk = 0;
+            }
+            // Check if $uploadOk is set to 0 by an error
+            if ($uploadOk == 0) {
+                echo "Sorry, your file was not uploaded.";
+            // if everything is ok, try to upload file
+            } else {
+                if (move_uploaded_file($_FILES["imgfile"]["tmp_name"], $target_file)) {
+                    echo "The file ". basename( $_FILES["imgfile"]["name"]). " has been uploaded.";
+                } else {
+                    echo "Sorry, there was an error uploading your file.";
+                }
+            }
+          }
+      return $target_file;
+    }   
+    function uploadFile(){
+      $target_dir = "../assets/projects/";
+        $filename = basename($_FILES["descfile"]["name"]);
+        $newname = str_replace(array(".cpp",".php",".html",".vb",".cs","jsl",".jar"),".txt",$filename);
+        
+          $target_file = $target_dir . $filename;
+          $uploadOk = 1;
+          $projectFileType = pathinfo($target_file,PATHINFO_EXTENSION);
+          // Check if image file is a actual image or fake image
           
-          $check = getimagesize($_FILES["imgfile"]["tmp_name"]);
+          $check = filesize($_FILES["descfile"]["tmp_name"]);
           if($check !== false) {
-              echo "File is an image - " . $check["mime"] . ".";
+              echo "File is an file - " . $check["mime"] . ".";
               $uploadOk = 1;
           } else {
-              echo "File is not an image.";
+              echo "File is not an file.";
               $uploadOk = 0;
           }
 
@@ -401,13 +476,12 @@
               $uploadOk = 0;
           }
           // Check file size
-          if ($_FILES["imgfile"]["size"] > 500000) {
+          if ($_FILES["descfile"]["size"] > 500000) {
               echo "Sorry, your file is too large.";
               $uploadOk = 0;
           }
           // Allow certain file formats
-          if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
-          && $imageFileType != "gif" ) {
+          if($projectFileType != "txt" && $projectFileType != "cpp" ) {
               echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
               $uploadOk = 0;
           }
@@ -416,16 +490,14 @@
               echo "Sorry, your file was not uploaded.";
           // if everything is ok, try to upload file
           } else {
-              if (move_uploaded_file($_FILES["imgfile"]["tmp_name"], $target_file)) {
+              if (move_uploaded_file($_FILES["descfile"]["tmp_name"], $target_file.".txt")) {
                   echo "The file ". basename( $_FILES["imgfile"]["name"]). " has been uploaded.";
               } else {
                   echo "Sorry, there was an error uploading your file.";
               }
           }
-         $_POST["nname"] = "";
-        }
-      
-      } 
+      return $target_file.".txt";
+    }
       
     ?>
     <title></title>

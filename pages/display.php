@@ -41,30 +41,29 @@
               <nav>
                 <ul class="nav masthead-nav">
                   <li class="navtop active" data-id="home">
-                    <a class="navtags" href="#home" data-id="home">Home</a>
+                    <a class="navtags" href="../index.php#home" id="home" data-id="home">Home</a>
                   </li>
                   <li class="navtop" data-id="projects" >
-                      <a class="navtags" href="#projects" data-id="projects">Projects</a>
+                      <a class="navtags" href="../index.php#project" data-id="projects">Projects</a>
                   </li>
                   <li class="navtop" data-id="code" >
-                      <a class="navtags" href="#codes" data-id="codes">Codes</a>
+                      <a class="navtags" href="../#codes" id="code" data-id="codes">Codes</a>
                   </li>
                   <li class="navtop" data-id="about" >
-                      <a class="navtags" href="#about" data-id="about">About Me</a>
+                      <a class="navtags" href="../#about" id="about" data-id="about">About Me</a>
                   </li>
                   <li class="navtop" data-id="contact" >
-                    <a class="navtags" href="#contact" data-id="contacts">Contact</a>
+                    <a class="navtags" href="../#contact" id="contact" data-id="contacts">Contact</a>
                   </li>
               </ul>
             </nav>
             </div>
           </div>
-          <!--<div class="inner cover">
+          <div class="inner cover">
             <div class="book">
               <div class="opened">
                 <div class="pages">
-                  
-                  <div id="home" >
+                   <div id="display" >
                     <div id="homecont" class="cont">
                      <div class="pagecont">
                        <div class="span">I love to program,learn and expand my knowledge in the field of technologies, and I will work hard to impress you. I  hope I can help develop new technologies with your company<br>
@@ -72,121 +71,6 @@
                        </div>
                        
                      </div>
-                    </div>
-                  </div>
-                  <div id="project" >
-                    <div id="projectcont" class="cont clo">
-                      <div class="pagecont"> 
-                       <table class="iconss"> 
-                       </table>
-                     </div>
-                    </div>
-                  </div>
-                  <div id="code">
-                    <div id="codecont" class="cont clo">
-                      <div class="pagecont"> 
-                       <table class="iconscode">
-                       </table>
-                     </div>
-                    </div>
-                  </div>
-                  <div id="about" >
-                    <div id="aboutcont" class="cont clo">
-                      <div class="pagecont">
-                        <div class="span aboutadjust">
-                          I love to program,learn and expand my knowledge in the field of technologies, and I will work hard to impress you. I  hope I can help develop new technologies with your company.
-                          <br><br>
-                          
-                          &nbsp; One of my goals is to reach my life long dream of becoming a great inventor like Nikla Tesla, but I understand that products must be made to sell for profit. I am into working with Raspberry pi's, Arduinos, and so I am into robotics.I have a two 3d printer one i built, and one I bought I preferr the Raise 3d printer, as Such i am into 3d modling also.I am teach myself enginerring for my intented goals.
-                          <br><br>
-                          
-                          &nbsp; I am also an artist I have been drawing since I was eight years old my style of art is realism, I like to do poraits of people. I can do 2d animations,and 3d animations and know how to use blender very well.I understand how Html 5 cavas work, and would love to make a web game. My Galleries will have all my works, and I will try to update this and my future youtube webpage.
-                          <br><br>
-                          
-                          <a class="learn navtop" href="#about">If You Would to See my resmue Click Here</a>
-                          
-                          <br>
-                          <br>
-                          <br>
-                          <br>
-                          <br>
-                          
-                          
-                        </div>
-                        <div id="aboutpopup" class="popup">
-                          <div class="container-fluid">
-                            <div class="content">
-                              here
-                            </div>
-                          </div>
-                        </div>
-                     </div>
-                    </div>
-                  </div>
-                  <div id="contact" class="">
-                    <div id="contactcont" class="cont clo">
-                      <div class="pagecont contpage "> 
-                       <div id="contactinf" class="linkcont span">
-                         If you would like to contact me for job oppertuinies, or for my freelance coding assiteence with your projects my upworks profile is <br>
-                         <table class="linktable ">
-                           <tr>
-                            <td class="linktr">
-                              <a class="contact_click" target="_blank" href="https://www.upwork.com/o/profiles/users/_~01fde4b6749f2fff7c/"><img class="links" src="assets/images/upwork.png" alt="upworks_link" width="300" height="300">
-                              </a>
-                             </td>
-                             <td class="linktr">
-                              <a class="contact_click" href="#gmail" data-id="gmail"><img class="links" src="assets/images/Gmail_Icon.png" alt="upworks_link" width="300" height="300">
-                              </a>
-                             </td>
-                           </tr>
-                         </table>
-                         
-                       </div>
-                        <div id="messagezone" class="message_area clo">
-                          
-                          <div class="span">
-                            Email Me At<br>
-                            <a href="#close" id="myemail" class="contact_click" data-id="close">kishon.a.diaz@gmail.com</a>
-                          </div>
-                          <input id="clipboard" type="text" hidden="hidden">-->
-                         <!--<form >
-
-                            
-                            <div class="input_cont">
-                              <span class="helper_txt"></span>
-                              <input type="text" placeholder="First Name">
-                              <span class="error_txt">Error</span>
-                            </div><br>
-                            <div class="input_cont">
-                              <span class="helper_txt"></span>
-                              <input placeholder="Last Name">
-                              <span class="error_txt">Error</span>
-                            </div><br>
-                            <div class="input_cont">
-                              <span class="helper_txt"></span>
-                              <input placeholder="Email">
-                              <span class="error_txt">Error</span>
-                            </div><br>
-                            <div class="input_cont">
-                              <span class="helper_txt"></span>
-                              <input placeholder="Phone Number">
-                              <span class="error_txt">Error</span>
-                            </div><br>
-                            <div class="input_cont">
-                              <span class="helper_txt"></span>
-                              <textarea placeholder="Message"></textarea>
-                              <span class="error_txt">Error</span>
-                            </div><br>
-                           <div class="">
-                              <span class="helper_txt"></span>
-                              <input type="submit" value="Send">
-                              <input type="reset" value="Reset">
-                              <span class="error_txt">Error</span>
-                            </div><br>
-                            
-                         </form>
-                       </div>
-                      </div>
                     </div>
                   </div>
                 </div>

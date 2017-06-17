@@ -26,6 +26,7 @@
     <script type="text/javascript" src="javascript/three.js-master/examples/js/Detector.js"></script>
     <script type="text/javascript" src="javascript/three.js-master/examples/js/renderers/CanvasRenderer.js"></script>
     <script type="text/javascript" src="javascript/mylibs.js"></script>
+    <script type="text/javascript" src="./javascript/randomColor.js"></script>
     <?php $processpage="./admin/login.php"; include('./php_files/createdb.php');?>
     
   </head>
@@ -45,7 +46,7 @@
         </canvas>
           
           <div class="masthead clearfix">
-            <button id="colormenu">butt</button>
+<!--            <button id="colormenu">butt</button>-->
 <!--            <div class="popup"></div>-->
             <div class="inner">
               
@@ -57,7 +58,7 @@
                     <a class="navtags" href="#home" data-id="home">Home</a>
                   </li>
                   <li class="navtop" data-id="projects" >
-                      <a class="navtags" href="#projects" data-id="projects">Projects</a>
+                      <a class="navtags" id="projects" href="#projects" data-id="projects">Projects</a>
                   </li>
                   <li class="navtop" data-id="code" >
                       <a class="navtags" href="#codes" data-id="codes">Codes</a>
@@ -80,8 +81,8 @@
                   <div id="home" >
                     <div id="homecont" class="cont">
                      <div class="pagecont">
-                       <div class="span">I love to program, learn and expand my knowledge in the field of technologies, and I will work hard to impress you. I hope I can help develop new technologies with your company<br>
-                       <a class="learn">Learn more about me?</a>
+                       <div class="span">I am passionate about programming and expanding my knowledge in the field of technology. I have strong work ethics, dependable and professional.  Once I am given the opportunity to be a programmer for your company it will open the door to develop new technologies and innovative ideas.<br>
+                       <a class="navtags" href="#about" data-id="about">Learn more about me?</a>
                        </div>
                        
                      </div>
@@ -107,16 +108,16 @@
                     <div id="aboutcont" class="cont clo">
                       <div class="pagecont">
                         <div class="span aboutadjust">
-                          I love to program, learn and expand my knowledge in the field of technologies, and I will work hard to impress you. I hope I can help develop new technologies with your company. 
+                          I am passionate about programming and expanding my knowledge in the field of technology. I have strong work ethics, dependable and professional.  Once I am given the opportunity to be a programmer for your company it will open the door to develop new technologies and innovative ideas.
                           <br><br>
                           
-                          &nbsp; One of my goals is to reach my lifelong dream of becoming a great inventor like Nikola Tesla, but I understand that products must be made to sell for profit. I am into working with Raspberry pi's, Arduinos, and so I am into robotics. I have a two 3d printer one I built, and one I bought I prefer the Raise 3d printer, as Such I am into 3d modeling also. I am teach myself engineering for my intended goals. 
+                          &nbsp; My inspiration is to become a great inventor like Nikola Tesla. In business the bottom line is the profit margin and I intend to create products to sell for profit. I design 3D Models using Autodesk and Up Works Software. I am working with Raspberry pi, Arduinos and Robotics. I own two 3d printers; I built one from scratch and up scaled it, the other one I bought is the Raise 3d printer.  I have taught myself engineering for my intended goals. 
                           <br><br>
                           
-                          &nbsp; I am also an artist I have been drawing since I was eight years old my style of art is realism, I like to do portrait of people. I can do 2d animations, and 3d animations and know how to use blender very well. I understand how Html 5 canvas work, and would love to make a web game. My Galleries will have all my works.
+                          &nbsp; My Artistic talent is drawing in the style of Realism.  I have been drawing since the age of eight and especially love to draw portraits of people.  I create 2D and 3D Animations using Blender Software. I am creating a web game using Html 5 canvas. Visit My Galleries for a demonstration of my creations.
                           <br><br>
                           
-                          <a class="learn navtop" href="#about">If You Would to See my resume Click Here </a>
+                          <a class="navtags" href="#resume" data-id="resume">If You Would to See my resume Click Here </a>
                           
                           <br>
                           <br>
@@ -147,6 +148,10 @@
                          If you would like to contact me for job opportunities, or for my freelance coding assistance with your projects my up works profile is <br>
                          <table class="linktable ">
                            <tr>
+                             <td class="linktr">
+                              <a class="contact_click" target="_blank" href="https://github.com/kishondiaz"><img class="links" src="assets/images/GitHub-Mark-64px.png" alt="github" width="300" height="300">
+                              </a>
+                             </td>
                             <td class="linktr">
                               <a class="contact_click" target="_blank" href="https://www.upwork.com/o/profiles/users/_~01fde4b6749f2fff7c/"><img class="links" src="assets/images/upwork.png" alt="upworks_link" width="300" height="300">
                               </a>
@@ -206,6 +211,116 @@
                       </div>
                     </div>
                   </div>
+                <!--  <div id="resume" >
+                    <div id="resumecont" class="cont clo">
+                      <div class="pagecont">
+                        <div class="span">
+                          <pre>
+                            
+
+    Kishon Diaz
+
+    2750 NW 45th st Apt 101, Oakland Park, FL, 33309
+
+    561-420-7359
+
+    E-mail: kishon.a.diaz@gmail.com
+
+    https://github.com/kishondiaz
+
+
+
+    OBJECTIVE
+
+
+
+    To obtain a position in a challenging environment that allows me to utilize my software development, web and creative skills to help develop new high-tech products.
+
+
+
+    EXPERIENCE
+
+
+
+    Xfinity/Comcast, 141 NW 16th St., Pompano Beach, FL 33062                                                              January 2013 
+
+    Dispatcher                                                                                                                                                             December 2013
+
+
+
+    •         Helped the Comcast technicians with their jobs using a computer system activating boxes, internet and phone.
+
+    •         Dealt with disgruntled customers and helped to diffuse volatile situations so that the technicians could finish repairs and installations.
+
+    , 789 international Parkway, Sunrise, FL, 33325                                                          February 2008 –
+
+    Comcast Technician 3                                                                                                                                        December 2012  
+
+
+
+    •         Worked as a Comcast Technician installing and repairing internet, phone and cable television issues.
+
+    •         Dealt with customers on a daily basis.
+
+    US Marine Corp                                                                                                                                                 2005 – 2007
+
+    Lance Corporal                                                                                                                                                                  
+
+
+
+    •         Served in the United States Marine Corp.
+
+    •         Worked as an aviation electronics specialist.
+
+    EDUCATION
+
+
+
+    Broward College, 3501 Davie Rd, Davie, Florida 33314                                                                                        2012-
+
+    Pursuing BS in Computer Information                                                                                                                  
+
+
+
+    Piper High School                                                                                                                                                              2004
+
+    High School diploma 
+
+
+
+
+
+    RELATED SKILLS
+
+
+
+    •         Proficient in Microsoft Word, Excel and PowerPoint.
+
+    •         Experience with the following programming languages: Python, Java, Android Programming,
+
+    •         Have Completed the classes for CIW Certification, A+ Practical , A++Essentials, Javascript, Php,
+
+    •         Skilled in XML, HTML, CSS, Adobe Flash, Sqlight, Microsoft SQL,C++,C#,
+
+    •         Artistic skills include: Realism, Painted murals, Acrylic paintings, air brush, color pencil, chalk ,use of Wacom drawing tablet to draw in PhotoShop, Adobe Flash, Karita, and Gimp
+
+ 
+
+                          </pre>
+                          
+                          <br>
+                          <br>
+                          <br>
+                          <br>
+                          <br>
+                          
+                          
+                        </div>
+
+
+                     </div>
+                    </div>
+                  </div>-->
                 </div>
               </div>
             
@@ -228,19 +343,19 @@
 
    
     
-<!--    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>-->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
       
       
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script type="text/javascript" src="javascript/bootstrap.min.js"></script>
-    <script type="text/javascript" src="javascript/three.js-master/build/three.js"></script>
+    <script type="text/javascript" src="./javascript/bootstrap.min.js"></script>
+<!--    <script type="text/javascript" src="javascript/three.js-master/build/three.js"></script>-->
     
     <script type="text/javascript" src="javascript/mainjs.js"></script>
     <script type="text/javascript" src="javascript/background.js"></script>
 <!--    <script type="text/javascript" src="javascript/adloglin.js"></script>-->
     
-    <script type="text/javascript">
+<script type="text/javascript">
   var adedit = document.getElementById('adedit');
   var ogout = document.getElementById('ogout');
   
@@ -251,11 +366,5 @@
   
 </script>
 
-    
-    <?php CloseDB();
-      
-    ?>
-    
-    
   </body>
 </html>

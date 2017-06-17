@@ -6,7 +6,7 @@
       $adusers="";
       $adpass="";
       $usern = " ";
-      $passw = " ";
+      $passw =<!-- " ";-->
       include('../php_files/dbconnection.php');
       foreach($db->query("SELECT * FROM `users` WHERE 1 ") as $h){
          $adusers = $h['Username'];

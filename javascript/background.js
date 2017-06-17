@@ -1,10 +1,11 @@
-var colorarry = [];
+var colorarry = [randomColor()];
 var da = JSON.parse('[]');
-
-fillarry(colorarry,{"red":"black","blue":"blue","color3":"pink"});
-//backgroundColors(colorarry);
+//fillarry(colorarry, randomColor());
+//fillarry(colorarry,{"red":"black","blue":"blue","color3":"pink"});
+//backgroundColors(colorarry,randomColor());
 //arrayinarray(colorarry,"blue");
 //arrayinarray(colorarry,"red");
+//console.log(randomColor());
 
 function fillarry(array,item){
   array = item;

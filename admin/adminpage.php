@@ -116,15 +116,15 @@
 <!--        <input name="add" class="Piadd" type="submit" value="Add">-->
         <table>
           <tr>
-            <th>Procject Item Id</th>
             <th>Procject Id</th>
+            <th>Procject Item Id</th>
             <th>Project Name</th>
             <th>Project Description</th>
           </tr>
           <?php
             foreach($db->query('SELECT * FROM `projectitems`') as $h){
-            echo"<tr><td>".$h['Prid']."</td>";
-            echo"<td>".$h['Pid']."</td>";
+            echo"<tr><td>".$h['Pid']."</td>";
+            echo"<td>".$h['Prid']."</td>";
             echo"<td>".$h['PrName']."</td>";
             echo"<td>".$h['Prdesc']."</td>
             <td><input name=\"update\" class=\"Piup\" type=\"submit\" data-id=\"".$h['Prid']."\" data-id2=\"".$h['Pid']."\" value=\"update\"></td>
@@ -140,20 +140,18 @@
         
         <table>
           <tr>
-            <th>Procject subitems Id</th>
             <th>Procject item Id</th>
-            <th>Procject Id</th>
+            <th>Procject subitems Id</th>
             <th>Images Location</th>
             <th>Items</th>
           </tr>
           <?php
               foreach($db->query('SELECT * FROM `projectsubitems`') as $h){
-              echo"<tr><td>".$h['Prsid']."</td>";
-              echo"<td>".$h['Prid']."</td>";
-              echo"<td>".$h['Pid']."</td>";
+              echo"<tr><td>".$h['Prid']."</td>";
+              echo"<td>".$h['Prsid']."</td>";
               echo"<td>".$h['Imgs_Loc']."</td>";
               echo"<td>".$h['Project']."</td>
-              <td><input name=\"update\" class=\"Psiup\" type=\"submit\" value=\"update\"></td></tr>";
+              <td><input name=\"update\" class=\"Psiup\" type=\"submit\" data-id=\"".$h['Prsid']."\" data-id2=\"".$h['Prid']."\" value=\"update\"></td></tr>";
             };?>
         </table>
       </fieldset>
@@ -264,6 +262,9 @@
                          "POST","_self");
               break;
             }case("Psiup") :{
+              $.redirect('./dynamicresults.php',
+                         {who:""+e.target.className+"", ids:""+e.target.getAttribute('data-id')+"", ids2:""+e.target.getAttribute('data-id2')+""},
+                         "POST","_self");
               break;
             }case("Cadd") :{
               break;
