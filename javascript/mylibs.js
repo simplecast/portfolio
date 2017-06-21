@@ -46,7 +46,8 @@ var ObjectIcons = function(parent){
   this.tds = new Array();
   
   this.newR = 0;
-  
+  this.index =0;
+  this.indexR =0;
 //  this.atag.appendChild(this.img);
 //  this.td.appendChild(this.atag);
 //  this.tds.push(this.td);
@@ -150,7 +151,11 @@ var ObjectIcons = function(parent){
             if(this.trs[olist.index] == undefined){
               this.newRow();
             }
-            this.trs[olist.index].appendChild(this.tds[this.addcount]);
+           
+              this.trs[olist.index].appendChild(this.tds[this.addcount]);
+              for(var i=0; i < this.tds.length; i++ )
+                this.tds[i].setAttribute("data-id",""+this.addcount+"");
+            
             
           }
       }
@@ -161,7 +166,39 @@ var ObjectIcons = function(parent){
 
     this.addcount++;
   }
-  
+  this.setRow = function(){
+    for(var i=0; i< this.tds.length; i++){
+      console.log(this.partentEle[0].parentElement.getBoundingClientRect().right);
+      if(this.tds[i].getBoundingClientRect().right >= this.partentEle[0].parentElement.getBoundingClientRect().right){
+        this.indexR++;
+        whichone = this.indexR;
+        //console.log(this.index);
+      }
+      /*if(this.tds[whichone] === this.tds[i]){
+        this.tds[i].style.background= "blue";
+        if(this.trs[index] == undefined){
+          this.newRow();
+          $(this.partentEle[0]).append(this.trs[index]);
+        }
+        $(this.tds[whichone]).appendTo(this.trs[index]);
+        
+      }*/
+      
+      
+    }
+    for(var i =0; i < this.trs.length; i++){
+      this.index++;
+    }
+    if(this.trs[this.index] == undefined){
+      
+          this.newRow();
+          console.log((this.tds[whichone-1]));
+          $(this.partentEle[0]).append(this.trs[this.index]);
+          for(var j=0; j < Math.floor(whichone/2); j++)
+            $(this.tds[j]).appendTo(this.trs[this.index]);
+    }
+    
+  }
   this.getRects = function(index){
     return this.tds[index].getBoundingClientRect();
   }

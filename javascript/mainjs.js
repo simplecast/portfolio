@@ -37,6 +37,9 @@ cobjs.addtd('button',{text:"Python",index:0});
 $('.iconss').append(objs.appendItem());
 $('.iconscode').append(cobjs.appendItem());
 
+objs.setRow(1,1);
+cobjs.setRow(2,1);
+
 
 //alert("here");
 $(".navtags").on('click touchstart',function(){

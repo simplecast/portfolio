@@ -59,6 +59,7 @@ body{
   border-bottom: 1px solid white;
 }
 .iconss{
+  overflow-x: hidden;
   white-space: pre-wrap;
   display:table;
   position: absolute;
@@ -108,7 +109,8 @@ br{
   /*padding: 82vh;*/
 }
 .pagecont{
-  overflow: auto;
+/*  overflow: auto;*/
+  overflow-x: hidden;
   position: absolute;
 /*  background: green;*/
   width: 100%;
@@ -206,10 +208,25 @@ br{
   
   z-index: 30;
 }
+tbody{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: auto;
+  margin-top: auto;
+}
 .tdsa{
+/*
   display:inline-block;
   margin: 25px;
   align-self: auto;
+*/
+  align-self: auto;
+  margin-top: 1000px;
 }
 .closebtn {
   position: absolute;
@@ -259,7 +276,7 @@ br{
   font-family: 'Shrikhand', cursive;
   padding: 10px;
   margin: 1px;
-  border: 1px solid black
+/*  border: 1px solid black*/
 }.btnclass:hover{
   background-color: lightgray;
 /*  border: none;*/
