@@ -19,6 +19,8 @@
     $SQLstatement = 'CREATE TABLE IF NOT EXISTS ProjectItems (
       Pid INT NOT NULL,
       Prid INT UNIQUE AUTO_INCREMENT NOT NULL,
+      HasImg VARCHAR (10) DEFAULT "false",
+      HasFile VARCHAR (10) DEFAULT "false",
       PrName VARCHAR (100) NOT NULL,
       Prdesc VARCHAR(200),
       PRIMARY KEY (Prid),
@@ -27,12 +29,34 @@
     
     $db->exec($SQLstatement);
     
-    $SQLstatement = 'CREATE TABLE IF NOT EXISTS ProjectSubItems (
+  /*  $SQLstatement = 'CREATE TABLE IF NOT EXISTS ProjectSubItems (
       Prid int NOT NULL,
       Prsid INT UNIQUE AUTO_INCREMENT,
-      Imgs_Loc VARCHAR(100),
-      Project VARCHAR(500),
+      ImgID INT,
+      PrFile,
       PRIMARY KEY (Prsid),
+      FOREIGN KEY (Prid) REFERENCES ProjectItems(Prid)
+    );';*/
+    
+    //$db->exec($SQLstatement);
+        
+    $SQLstatement = 'CREATE TABLE IF NOT EXISTS ProjectImgs (
+      Prid int NOT NULL,
+      ImgID INT UNIQUE AUTO_INCREMENT,
+      Name VARCHAR (20),
+      Size INT,
+      PRIMARY KEY (ImgID),
+      FOREIGN KEY (Prid) REFERENCES ProjectItems(Prid)
+    );';
+    
+    $db->exec($SQLstatement);
+    
+    $SQLstatement = 'CREATE TABLE IF NOT EXISTS ProjectFiles (
+      Prid int NOT NULL,
+      FileID INT UNIQUE AUTO_INCREMENT,
+      Name VARCHAR (20),
+      Size INT,
+      PRIMARY KEY (FileID),
       FOREIGN KEY (Prid) REFERENCES ProjectItems(Prid)
     );';
     
@@ -41,7 +65,7 @@
     $SQLstatement = 'CREATE TABLE IF NOT EXISTS Codes (Cid INT UNIQUE AUTO_INCREMENT,
       Name VARCHAR (100) NOT NULL,
       Img_Loc VARCHAR(100),
-      Isactived VARCHAR (8) NOT NULL, 
+      Isactived VARCHAR (8) NOT NULL DEFAULT "true", 
       PRIMARY KEY (Cid)
     );';
     
@@ -50,6 +74,8 @@
     $SQLstatement = 'CREATE TABLE IF NOT EXISTS CodeItems (
       Cid INT NOT NULL,
       Ciid INT UNIQUE AUTO_INCREMENT,
+      HasImg VARCHAR (10) DEFAULT "false",
+      HasFile VARCHAR (10) DEFAULT "false",
       CName VARCHAR (100) NOT NULL,
       Cdesc VARCHAR(200),
       PRIMARY KEY (Ciid),
@@ -58,12 +84,35 @@
     
     $db->exec($SQLstatement);
     
-    $SQLstatement = 'CREATE TABLE IF NOT EXISTS CodeSubItems (
+    
+    /*$SQLstatement = 'CREATE TABLE IF NOT EXISTS CodeSubItems (
     Ciid int NOT NULL,
     Csid INT UNIQUE AUTO_INCREMENT,
     Code VARCHAR(500),
     PRIMARY KEY (Csid),
     FOREIGN KEY (Ciid) REFERENCES CodeItems(Ciid)
+    );';
+    
+    $db->exec($SQLstatement);*/
+    
+    $SQLstatement = 'CREATE TABLE IF NOT EXISTS CodeImgs (
+      Ciid int NOT NULL,
+      ImgID int UNIQUE AUTO_INCREMENT,
+      Name VARCHAR (20),
+      Size INT,
+      PRIMARY KEY (ImgID),
+      FOREIGN KEY (Ciid) REFERENCES CodeItems(Ciid)
+    );';
+    
+    $db->exec($SQLstatement);
+    
+    $SQLstatement = 'CREATE TABLE IF NOT EXISTS CodeFiles (
+      Ciid int NOT NULL,
+      FileID int UNIQUE AUTO_INCREMENT,
+      Name VARCHAR (20),
+      Size INT,
+      PRIMARY KEY (FileID),
+      FOREIGN KEY (Ciid) REFERENCES CodeItems(Ciid)
     );';
     
     $db->exec($SQLstatement);
