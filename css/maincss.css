@@ -1,0 +1,18 @@
+.banner {
+    background: linear-gradient(rgba(85.1%, 85.1%, 85.1%, 1), white);
+    margin-left: -5.4vmin!important;
+    margin-right: -5.7vmin!important;
+    margin-top: -5vmin;
+}
+
+.openbanner {
+    position: absolute;
+    float: left;
+    z-index: 0;
+    margin-left: 6.2vmin;
+    height: 42px;
+}
+
+#menu-toggle {
+    z-index: 1;
+}
