@@ -6,13 +6,55 @@
 }
 
 .openbanner {
-    position: absolute;
-    float: left;
+    margin-right: 100%;
+    margin-top: -43px;
     z-index: 0;
-    margin-left: 6.2vmin;
+    margin-left: 7.9vmin;
     height: 42px;
+    background: lightgoldenrodyellow;
+}
+
+.openbanner>img {
+    margin-bottom: 10px;
 }
 
 #menu-toggle {
     z-index: 1;
+}
+
+.menucontainer {
+    display: inline-block;
+    cursor: pointer;
+    padding-right: 12px;
+    transform: translate(0px, 10px) scale(.5, .5);
+    -moz-transform: translate(0px, 10px) scale(.5, .5);
+    -webkit-transform: translate(0px, 10px) scale(.5, .5);
+    margin-top: -20px;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+    width: 25px;
+    height: 5px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+    -moz-transition: 0.4s;
+    -webkit-transition: 0.4s;
+    ;
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {
+    opacity: 0;
+}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
 }
