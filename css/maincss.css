@@ -1,8 +1,8 @@
 .banner {
     background: linear-gradient(rgba(85.1%, 85.1%, 85.1%, 1), white);
-    margin-left: -5.4vmin!important;
-    margin-right: -5.7vmin!important;
-    margin-top: -5vmin;
+    margin-left: -5.4vw!important;
+    margin-right: -5.7vw!important;
+    margin-top: -10vh;
 }
 
 .openbanner {
@@ -57,4 +57,26 @@
 .change .bar3 {
     -webkit-transform: rotate(45deg) translate(-8px, -8px);
     transform: rotate(45deg) translate(-8px, -8px);
+}
+
+.span {
+    width: 50vw;
+}
+
+.context {
+    text-align: center;
+}
+
+.homeimg {}
+
+#sidebar-wrapper {
+    background: linear-gradient(rgb(0%, 0%, 0%), rgba(30.8%, 30.8%, 30.8%, 1))
+}
+
+.header {
+    text-align: center;
+}
+
+#headertext {
+    text-align: center;
 }
