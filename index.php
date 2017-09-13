@@ -142,9 +142,9 @@
                 </div>
                 <div class="container gallery-container">
 
-    <h1>Bootstrap 3 Gallery</h1>
+    <h1>Some of my work </h1>
 
-    <p class="page-description text-center">Fluid Layout With Overlay Effect</p>
+    <p class="page-description text-center">This is a few of my works </p>
     
     <div class="tz-gallery">
 
